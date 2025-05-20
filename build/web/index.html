@@ -87,10 +87,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                 background-color: #e9ecef;
                 color: #00796B;
             }
+            .navbar {
+                box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .dropdown-menu {
+                margin-top: 0.5rem;
+            }
         </style>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #00796B;">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #00796B;">
             <div class="container-fluid">
                 <!-- Brand Logo -->
                 <a class="navbar-brand" href="index.html" style="margin-left: 20px;">How to Cook Recipes</a>
@@ -111,67 +117,52 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="recipesDropdown">
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Western</a>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Milk Tea</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="">Italian</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Pizza</a></li>
-                                                <li><a class="dropdown-item" href="">Pasta</a></li>
-                                                <li><a class="dropdown-item" href="">Risotto</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item" href="">French</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Croissant</a></li>
-                                                <li><a class="dropdown-item" href="">Ratatouille</a></li>
-                                                <li><a class="dropdown-item" href="">Coq au Vin</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item" href="">American</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Burger</a></li>
-                                                <li><a class="dropdown-item" href="">Hot Dog</a></li>
-                                                <li><a class="dropdown-item" href="">Apple Pie</a></li>
-                                            </ul>
-                                        </li>
+                                        <li><a class="dropdown-item" href="">Classic Milk Tea</a></li>
+                                        <li><a class="dropdown-item" href="">Milk Tea Latte</a></li>
+                                        <li><a class="dropdown-item" href="">Tropical Milk Tea</a></li>
+                                        <li><a class="dropdown-item" href="">Matcha Milk Tea</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropdown-submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#">Asian</a>
+                                    <a class="dropdown-item dropdown-toggle" href="#">Fruit Tea</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="">Chinese</a>
+                                        <li><a class="dropdown-item" href="#">Basic Fruit Tea</a></li>
+                                        <li><a class="dropdown-item" href="#">Pineapple Fruit Tea</a></li>
+                                        <li><a class="dropdown-item" href="#">Peach Oolong Tea</a></li>
+                                        <li><a class="dropdown-item" href="#">Strawberry Jasmine Tea</a></li>
+                                        <li><a class="dropdown-item" href="#">Mango Black Tea</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown-submenu">
+                                    <a class="dropdown-item dropdown-toggle" href="#">Coffee</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" href="#">ColdBrew</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Dim Sum</a></li>
-                                                <li><a class="dropdown-item" href="">Kung Pao Chicken</a></li>
-                                                <li><a class="dropdown-item" href="">Peking Duck</a></li>
+                                                <li><a class="dropdown-item" href="">How to make ColdBrew</a></li>
+                                                <li><a class="dropdown-item" href="">ColdBrew Latte</a></li>
+                                                <li><a class="dropdown-item" href="">Vanilla Sweet Cream Cold Brew</a></li>
+                                                <li><a class="dropdown-item" href="">Tropical Cold Brew</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item" href="">Japanese</a>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" href="#">Vietnamese Coffee</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Sushi</a></li>
-                                                <li><a class="dropdown-item" href="">Ramen</a></li>
-                                                <li><a class="dropdown-item" href="">Tempura</a></li>
+                                                <li><a class="dropdown-item" href="">Traditional Vietnamese Drip Coffee</a></li>
+                                                <li><a class="dropdown-item" href="">Bạc XỉuXỉu</a></li>
+                                                <li><a class="dropdown-item" href="">Egg Coffee</a></li>
+                                                <li><a class="dropdown-item" href="">Orange Coffee</a></li>
                                             </ul>
                                         </li>
-                                        <li><a class="dropdown-item" href="">Korean</a>
+                                        <li class="dropdown-submenu">
+                                            <a class="dropdown-item dropdown-toggle" href="#">Italian Coffee</a>
                                             <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Bibimbap</a></li>
-                                                <li><a class="dropdown-item" href="">Kimchi</a></li>
-                                                <li><a class="dropdown-item" href="">Bulgogi</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item" href="">Vietnamese</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Pho</a></li>
-                                                <li><a class="dropdown-item" href="">Banh Mi</a></li>
-                                                <li><a class="dropdown-item" href="">Spring Rolls</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a class="dropdown-item" href="">Thai</a>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="">Pad Thai</a></li>
-                                                <li><a class="dropdown-item" href="">Tom Yum</a></li>
-                                                <li><a class="dropdown-item" href="">Green Curry</a></li>
+                                                <li><a class="dropdown-item" href="">Cappuccino</a></li>
+                                                <li><a class="dropdown-item" href="">Latte</a></li>
+                                                <li><a class="dropdown-item" href="">Moka</a></li>
+                                                <li><a class="dropdown-item" href="">Macchiato</a></li>
                                             </ul>
                                         </li>
                                     </ul>
@@ -193,7 +184,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </nav>
 
         <!-- Main Content -->
-        <div class="main-content">
+        <div class="main-content" style="padding-top: 76px;">
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-12 text-center">
