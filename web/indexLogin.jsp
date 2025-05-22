@@ -77,12 +77,10 @@
         margin-left: 0;
     }
 
-    /* Tùy chọn: hover mở submenu */
     .dropdown-menu li:hover > .dropdown-menu {
         display: block;
     }
 
-    /* Đảm bảo submenu không bị ẩn */
     .dropdown-menu .dropdown-menu {
         display: none;
         position: absolute;
