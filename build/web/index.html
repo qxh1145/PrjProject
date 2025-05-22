@@ -93,6 +93,13 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             .dropdown-menu {
                 margin-top: 0.5rem;
             }
+            /* Add styles for disabled community link */
+            .nav-link.disabled {
+                pointer-events: none;
+                opacity: 0.6;
+                cursor: not-allowed;
+            }
+            
         </style>
     </head>
     <body>
@@ -116,7 +123,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                 Recipes
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="recipesDropdown">
-                                <li class="dropdown-submenu">
+                                <li class="dropdown">
                                     <a class="dropdown-item dropdown-toggle" href="#">Milk Tea</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="">Classic Milk Tea</a></li>
@@ -125,7 +132,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                         <li><a class="dropdown-item" href="">Matcha Milk Tea</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-submenu">
+                                <li class="dropdown">
                                     <a class="dropdown-item dropdown-toggle" href="#">Fruit Tea</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Basic Fruit Tea</a></li>
@@ -135,7 +142,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                         <li><a class="dropdown-item" href="#">Mango Black Tea</a></li>
                                     </ul>
                                 </li>
-                                <li class="dropdown-submenu">
+                                <li class="dropdown">
                                     <a class="dropdown-item dropdown-toggle" href="#">Coffee</a>
                                     <ul class="dropdown-menu">
                                         <li class="dropdown-submenu">
@@ -168,20 +175,37 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
                                     </ul>
                                 </li>
                             </ul>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Chatbot</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link disabled" href="#" id="communityLink">Community</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" 
+                                   data-bs-toggle="dropdown" aria-expanded="false">
+                                    Tools
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+                                    <li><a class="dropdown-item" href="#">Recipe Calculator</a></li>
+                                    <li><a class="dropdown-item" href="#">Unit Converter</a></li>
+                                    <li><a class="dropdown-item" href="#">Timer</a></li>
+                                    <li><a class="dropdown-item" href="#">Shopping List</a></li>
+                                </ul>
+                            </li>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">Chatbot</a>
-                        </li>
+                        
                     </ul>
 
                     <!-- Right Side Buttons -->
                     <div class="d-flex" style="margin-right: 20px;">
-                        <button class="btn btn-outline-light me-2">Login</button>
-                        <button class="btn btn-light">Register</button>
+                        <button class="btn btn-outline-light me-2"><a href="login.jsp" class="text-decoration-none text-light">Login</a></button>
+                        <button class="btn btn-light"><a href="http://localhost:8080/ProjectPrj/register.jsp"></a>Register</a></button>
                     </div>
                 </div>
             </div>
         </nav>
+        
 
         <!-- Main Content -->
         <div class="main-content" style="padding-top: 76px;">
@@ -198,7 +222,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         </div>
 
         <!-- Footer -->
-        <footer class="bg-dark text-light">
+        <footer class="text-light" style="background-color: #00796B;">
             <div class="container-fluid py-5">
                 <div class="row justify-content-center text-center">
                     <!-- About Section -->
@@ -247,7 +271,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
             </div>
 
             <!-- Copyright -->
-            <div class="bg-darker text-center py-3">
+            <div class="text-center py-3" style="background-color: #036358;">
                 <div class="container-fluid">
                     <p class="mb-0">&copy; 2024 How to Cook Recipes. All rights reserved.</p>
                 </div>
@@ -258,14 +282,30 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit thi
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-        <script>
+        <!-- <script>
             $(document).ready(function () {
                 $('.dropdown-submenu > a').on("click", function (e) {
                     e.preventDefault();
                     e.stopPropagation();
                     $(this).next('.dropdown-menu').toggle();
                 });
+
+                // Check if user is logged in (you can modify this condition based on your login logic)
+                function checkLoginStatus() {
+                    // This is a placeholder - replace with your actual login check logic
+                    const isLoggedIn = false; // Set this based on your login state
+                    
+                    const communityLink = $('#communityLink');
+                    if (isLoggedIn) {
+                        communityLink.removeClass('disabled');
+                    } else {
+                        communityLink.addClass('disabled');
+                    }
+                }
+
+                // Call the function when page loads
+                checkLoginStatus();
             });
-        </script>
+        </script> -->
     </body>
 </html>
