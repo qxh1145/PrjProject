@@ -176,6 +176,9 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">Test</a>
+                        <ul class="dropdown-menu">
+                            <li></li>
+                        </ul>
                     </li>
                 </ul>
 
@@ -193,7 +196,8 @@
 
     <!-- Main Content -->
     <div class="main-content">
-        <%@include file="component/topContent.jsp" %>
+        <%@include file="component/topContent.jsp"%>
+        <%@include file="component/content1.jsp"%>
     </div>
 
     <!-- Footer -->
