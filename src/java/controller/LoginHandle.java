@@ -4,7 +4,7 @@
  */
 package controller;
 
-import dal.UserDAO;
+import dao.UserDAO;
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -42,6 +42,7 @@ public class LoginHandle extends HttpServlet {
         if (user != null) {
             HttpSession session = request.getSession();
             session.setAttribute("user", username);
+            session.setAttribute("userInfo", user);
             response.sendRedirect("indexLogin.jsp");
         } else {
             request.setAttribute("error", "Sai username hoặc password!");

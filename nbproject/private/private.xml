@@ -5,7 +5,13 @@
         <group>
             <file>file:/D:/hoc/FPT/test/PrjProject/web/indexLogin.jsp</file>
             <file>file:/D:/hoc/FPT/test/PrjProject/src/java/controller/LoginHandle.java</file>
+            <file>file:/D:/hoc/FPT/test/PrjProject/src/java/controller/RegisterHandle.java</file>
+            <file>file:/D:/hoc/FPT/test/PrjProject/web/register.jsp</file>
             <file>file:/D:/hoc/FPT/test/PrjProject/web/login.jsp</file>
+            <file>file:/D:/hoc/FPT/test/PrjProject/src/java/model/UserName.java</file>
+            <file>file:/D:/hoc/FPT/test/PrjProject/src/java/dao/DBContext.java</file>
+            <file>file:/D:/hoc/FPT/test/PrjProject/src/java/dao/UserDAO.java</file>
+            <file>file:/D:/hoc/FPT/test/PrjProject/web/index.html</file>
         </group>
     </open-files>
 </project-private>

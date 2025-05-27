@@ -1,4 +1,4 @@
-package dal;
+package dao;
 
 import dao.DBContext;
 import java.sql.Connection;
@@ -79,8 +79,34 @@ public class UserDAO {
             
             return st.executeUpdate() > 0;
         } catch (Exception e) {
-            System.err.println("Registration error: " + e.getMessage());
+            System.err.println("Đăng kí thất bại: " + e.getMessage());
             return false;
         }
+    }
+
+    /**
+     * Gets user information by username
+     * @param username the username to get information for
+     * @return User object if found, null otherwise
+     */
+    public User getUserInfo(String username) {
+        String sql = "SELECT * FROM Users WHERE username = ?";
+        try (Connection conn = db.getConnection();
+             PreparedStatement st = conn.prepareStatement(sql)) {
+            
+            st.setString(1, username);
+            
+            try (ResultSet rs = st.executeQuery()) {
+                if (rs.next()) {
+                    return new User(
+                        rs.getString("username"),
+                        rs.getString("password")
+                    );
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("Error getting user info: " + e.getMessage());
+        }
+        return null;
     }
 } 
