@@ -77,12 +77,10 @@
         margin-left: 0;
     }
 
-    /* Tùy chọn: hover mở submenu */
     .dropdown-menu li:hover > .dropdown-menu {
         display: block;
     }
 
-    /* Đảm bảo submenu không bị ẩn */
     .dropdown-menu .dropdown-menu {
         display: none;
         position: absolute;
@@ -185,12 +183,19 @@
                 </ul>
 
                 <div class="d-flex" style="margin-right: 20px;">
-                    <button class="btn btn-outline-light me-2">
-                        <a href="login.jsp" class="text-decoration-none text-light">Login</a>
-                    </button>
-                    <button class="btn btn-light">
-                        <a href="http://localhost:8080/ProjectPrj/register.jsp" class="text-decoration-none text-dark">Register</a>
-                    </button>
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-user me-2"></i>
+                        <span class="text-light">
+                            <% 
+                                String username = (String) session.getAttribute("user");
+                                if (username != null) {
+                                    out.print(username);
+                                } else {
+                                    out.print("Guest");
+                                }
+                            %>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

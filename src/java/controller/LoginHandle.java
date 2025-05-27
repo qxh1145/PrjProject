@@ -4,6 +4,8 @@
  */
 package controller;
 
+import dal.UserDAO;
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -11,6 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
+import model.User;
 
 /**
  *
@@ -33,7 +36,18 @@ public class LoginHandle extends HttpServlet {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
         
-        response.sendRedirect("indexLogin.jsp");
+        UserDAO userDAO = new UserDAO();
+        User user = userDAO.checkLogin(username, password);
+        
+        if (user != null) {
+            HttpSession session = request.getSession();
+            session.setAttribute("user", username);
+            response.sendRedirect("indexLogin.jsp");
+        } else {
+            request.setAttribute("error", "Sai username hoặc password!");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+            dispatcher.forward(request, response);
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
