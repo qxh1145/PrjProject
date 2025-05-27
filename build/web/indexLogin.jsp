@@ -184,19 +184,19 @@
 
                 <div class="d-flex" style="margin-right: 20px;">
                     <div class="d-flex align-items-center">
-                        <i class="fas fa-user me-2"></i>
-                        <span class="text-light">
-                            <% 
-                                String username = (String) session.getAttribute("user");
-                                if (username != null) {
-                                    out.print(username);
-                                } else {
-                                    out.print("Guest");
-                                }
-                            %>
-                        </span>
+                        <% 
+                            String username = (String) session.getAttribute("user");
+                        %>
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-user me-2"></i>
+                                <span class="text-light me-3"><%= username %></span>
+                                <a href="index.html" class="btn btn-outline-light">
+                                    <i class="fas fa-sign-out-alt me-2"></i>Logout
+                                </a>
+                            </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </nav>
