@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ProjectFinal">
+    <Resource name="jdbc/ProjectFinal" 
+              auth="Container" 
+              type="javax.sql.DataSource"
+              maxTotal="100" 
+              maxIdle="30" 
+              maxWaitMillis="10000"
+              username="sa" 
+              password="sa" 
+              driverClassName="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              url="jdbc:sqlserver://localhost:1433;databaseName=ProjectPrjDB;encrypt=true;trustServerCertificate=true"/>
+</Context>
