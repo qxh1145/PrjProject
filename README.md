@@ -41,11 +41,21 @@
    - Login: sa
    - Password: sa
 
-3. Chạy các file SQL theo thứ tự:
-   - `src/main/java/dao/create_table.sql`: Tạo cấu trúc database và bảng
-   - `database/update_data.sql`: Cập nhật dữ liệu mới (nếu có)
+3. Chạy các file SQL theo thứ tự BẮT BUỘC:
+   a. Chạy file `src/main/java/dao/create_table.sql` TRƯỚC:
+      - Tạo database ProjectPrjDB
+      - Tạo bảng Users với cấu trúc đúng
+      - KHÔNG chứa dữ liệu mẫu
 
-4. Kiểm tra dữ liệu mẫu
+   b. Chạy file `database/update_data.sql` SAU:
+      - Thêm dữ liệu mẫu vào bảng Users
+      - Cập nhật dữ liệu mới (nếu có)
+
+4. Kiểm tra dữ liệu:
+   - Mở SSMS
+   - Kết nối với database ProjectPrjDB
+   - Chuột phải vào bảng Users -> Select Top 1000 Rows
+   - Kiểm tra dữ liệu mẫu đã được thêm vào
 
 ### 4. Cấu hình Project
 1. Mở project trong NetBeans
