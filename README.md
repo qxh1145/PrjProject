@@ -15,16 +15,39 @@
    - SQL Server Management Studio (SSMS)
    - Tomcat 1010.0
 
-### 2. Cài đặt Database
+### 2. Cấu hình SQL Server
+1. Mở SQL Server Configuration Manager
+2. Enable SQL Server Authentication:
+   - Click chuột phải vào SQL Server
+   - Properties -> Security
+   - Chọn "SQL Server and Windows Authentication mode"
+   - Click OK và restart SQL Server
+
+3. Tạo tài khoản SQL Server:
+   - Mở SSMS
+   - Security -> Logins
+   - Click chuột phải -> New Login
+   - Tạo tài khoản:
+     - Login name: sa
+     - Password: sa
+     - Server roles: sysadmin
+
+### 3. Cài đặt Database
 1. Mở SQL Server Management Studio (SSMS)
-2. Kết nối với SQL Server bằng tài khoản Windows Authentication
+2. Kết nối với SQL Server bằng tài khoản sa:
+   - Server type: Database Engine
+   - Server name: YOUR_SERVER_NAME
+   - Authentication: SQL Server Authentication
+   - Login: sa
+   - Password: sa
+
 3. Mở file `src/main/java/dao/create_table.sql`
 4. Chạy toàn bộ script để:
    - Tạo database ProjectPrjDB
    - Tạo bảng Users
    - Kiểm tra dữ liệu mẫu
 
-### 3. Cấu hình Project
+### 4. Cấu hình Project
 1. Mở project trong NetBeans
 2. Cập nhật thông tin kết nối trong `src/main/java/dao/DBContext.java`:
    ```java
@@ -35,7 +58,7 @@
 3. Clean and Build project
 4. Chạy trên Tomcat
 
-### 4. Quy trình làm việc với Git
+### 5. Quy trình làm việc với Git
 
 #### Khi bắt đầu làm việc:
 1. Pull code mới nhất về:
@@ -108,11 +131,6 @@
    - Chạy file `database/update_data.sql`
    - Kiểm tra dữ liệu đã được cập nhật
 
-### 5. Cấu trúc Database
-Bảng Users:
-- username (VARCHAR(50), PRIMARY KEY)
-- password (VARCHAR(50), NOT NULL)
-
 ### 6. Tài khoản mẫu
 1. Admin:
    - Username: admin
@@ -144,8 +162,11 @@ Bảng Users:
 ### 8. Xử lý lỗi thường gặp
 1. Lỗi kết nối database:
    - Kiểm tra SQL Server đang chạy
+   - Kiểm tra SQL Server Authentication đã được bật
+   - Kiểm tra tài khoản sa đã được tạo
    - Kiểm tra thông tin kết nối trong DBContext.java
    - Kiểm tra tường lửa
+   - Kiểm tra port 1433 đã được mở
 
 2. Lỗi khi pull code:
    - Lưu thay đổi hiện tại: `git stash`
