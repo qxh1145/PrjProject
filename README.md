@@ -41,11 +41,11 @@
    - Login: sa
    - Password: sa
 
-3. Mở file `src/main/java/dao/create_table.sql`
-4. Chạy toàn bộ script để:
-   - Tạo database ProjectPrjDB
-   - Tạo bảng Users
-   - Kiểm tra dữ liệu mẫu
+3. Chạy các file SQL theo thứ tự:
+   - `src/main/java/dao/create_table.sql`: Tạo cấu trúc database và bảng
+   - `database/update_data.sql`: Cập nhật dữ liệu mới (nếu có)
+
+4. Kiểm tra dữ liệu mẫu
 
 ### 4. Cấu hình Project
 1. Mở project trong NetBeans
@@ -111,7 +111,7 @@
    - Chuột phải vào database ProjectPrjDB
    - Tasks -> Generate Scripts
    - Chọn bảng Users
-   - Advanced -> Types of data to script -> Schema and data
+   - Advanced -> Types of data to script -> Data only
    - Lưu file với tên `database/update_data.sql`
 
 2. Commit file SQL:
