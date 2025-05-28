@@ -13,7 +13,7 @@
    - JDK 17 hoặc cao hơn
    - NetBeans IDE
    - SQL Server Management Studio (SSMS)
-   - Tomcat 1010.0
+   - Tomcat 10.1.39
 
 ### 2. Cấu hình SQL Server
 1. Mở SQL Server Configuration Manager
