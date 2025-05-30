@@ -1,3 +1,4 @@
+D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\model\AIResponse.java
 D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\controller\LoginHandle.java
 D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\model\UserName.java
 D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\com\mycompany\projectfinal\resources\JakartaEE8Resource.java
@@ -5,4 +6,6 @@ D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\controller\RegisterHandle.ja
 D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\dao\DBContext.java
 D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\com\mycompany\projectfinal\JakartaRestConfiguration.java
 D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\model\User.java
+D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\controller\AIController.java
 D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\dao\UserDAO.java
+D:\hoc\FPT\Semester4\PRJ\ProjectFinal\src\main\java\service\GeminiService.java

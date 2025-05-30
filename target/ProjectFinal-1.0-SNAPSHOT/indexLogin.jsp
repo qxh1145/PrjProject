@@ -129,7 +129,7 @@
                                     <li class="dropend">
                                         <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">ColdBrew</a>
                                         <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#">How to make ColdBrew</a></li>
+                                            <li><a class="dropdown-item" href="recipe/coffee/htmcoldbrew.html">How to make ColdBrew</a></li>
                                             <li><a class="dropdown-item" href="#">ColdBrew Latte</a></li>
                                             <li><a class="dropdown-item" href="#">Vanilla Sweet Cream Cold Brew</a></li>
                                             <li><a class="dropdown-item" href="#">Tropical Cold Brew</a></li>
@@ -158,7 +158,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Chatbot</a>
+                        <a class="nav-link" href="${pageContext.request.contextPath}/ai/chatbot">Chatbot</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" id="communityLink">Community</a>

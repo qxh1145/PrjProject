@@ -3,6 +3,18 @@
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
    version="4.0">
+    
+    <!-- Servlet Configuration -->
+    <servlet>
+        <servlet-name>AIController</servlet-name>
+        <servlet-class>controller.AIController</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>AIController</servlet-name>
+        <url-pattern>/ai/*</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
