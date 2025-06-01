@@ -43,6 +43,8 @@ public class LoginHandle extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("user", username);
             session.setAttribute("userInfo", user);
+            session.setAttribute("accountType", user.getAccountType());
+            session.setAttribute("premiumExpiryDate", user.getPremiumExpiryDate());
             response.sendRedirect("indexLogin.jsp");
         } else {
             request.setAttribute("error", "Sai username hoặc password!");

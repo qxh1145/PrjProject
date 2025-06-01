@@ -34,7 +34,12 @@ public class UserDAO {
             
             try (ResultSet rs = st.executeQuery()) {
                 if (rs.next()) {
-                    return new User(rs.getString("username"), rs.getString("password"));
+                    return new User(
+                        rs.getString("username"),
+                        rs.getString("password"),
+                        rs.getString("account_type"),
+                        rs.getTimestamp("premium_expiry_date")
+                    );
                 }
             }
         } catch (Exception e) {
