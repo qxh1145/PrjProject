@@ -126,7 +126,7 @@
         }
 
         .tips-item::before {
-            content: "•";
+            content: "\2022";
             color: #2c3e50;
             position: absolute;
             left: 0;
@@ -282,7 +282,7 @@
                     <div class="recipe-content">
                         <h3 class="recipe-name">Vietnamese Iced Coffee</h3>
                         <p class="recipe-description">A sweet and strong coffee drink with condensed milk</p>
-                        <a href="#" class="recipe-link">View Recipe →</a>
+                        <a href="#" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
 
@@ -291,7 +291,7 @@
                     <div class="recipe-content">
                         <h3 class="recipe-name">Nitro Cold Brew</h3>
                         <p class="recipe-description">Smooth and creamy coffee with a frothy top</p>
-                        <a href="#" class="recipe-link">View Recipe →</a>
+                        <a href="#" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
 
@@ -300,7 +300,7 @@
                     <div class="recipe-content">
                         <h3 class="recipe-name">Coffee Tonic</h3>
                         <p class="recipe-description">Refreshing coffee drink with tonic water</p>
-                        <a href="#" class="recipe-link">View Recipe →</a>
+                        <a href="#" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
             </div>
