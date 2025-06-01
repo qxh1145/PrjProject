@@ -38,7 +38,7 @@
                                 <li class="dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">ColdBrew</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="recipe/coffee/htmcoldbrew.html">How to make ColdBrew</a></li>
+                                        <li><a class="dropdown-item" href="recipe/coffee/htmcoldbrew.jsp">How to make ColdBrew</a></li>
                                         <li><a class="dropdown-item" href="#">ColdBrew Latte</a></li>
                                         <li><a class="dropdown-item" href="#">Vanilla Sweet Cream Cold Brew</a></li>
                                         <li><a class="dropdown-item" href="#">Tropical Cold Brew</a></li>
@@ -48,7 +48,7 @@
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Vietnamese Coffee</a>
                                     <ul class="dropdown-menu">
                                         <li><a class="dropdown-item" href="#">Traditional Vietnamese Drip Coffee</a></li>
-                                        <li><a class="dropdown-item" href="#">Bạc Xỉu</a></li>
+                                        <li><a class="dropdown-item" href="#">Bac Xiu</a></li>
                                         <li><a class="dropdown-item" href="#">Egg Coffee</a></li>
                                         <li><a class="dropdown-item" href="#">Orange Coffee</a></li>
                                     </ul>
