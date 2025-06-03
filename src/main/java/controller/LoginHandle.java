@@ -65,7 +65,8 @@ public class LoginHandle extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        // Redirect GET requests to login page
+        response.sendRedirect("login.jsp");
     }
 
     /**
@@ -79,7 +80,41 @@ public class LoginHandle extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+
+            // Validate input
+            if (username == null || username.trim().isEmpty() || 
+                password == null || password.trim().isEmpty()) {
+                request.setAttribute("error", "Vui lòng nhập đầy đủ thông tin!");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+                dispatcher.forward(request, response);
+                return;
+            }
+
+            UserDAO userDAO = new UserDAO();
+            User user = userDAO.checkLogin(username, password);
+
+            if (user != null) {
+                HttpSession session = request.getSession();
+                session.setAttribute("user", username);
+                session.setAttribute("userInfo", user);
+                session.setAttribute("accountType", user.getAccountType());
+                session.setAttribute("premiumExpiryDate", user.getPremiumExpiryDate());
+                
+                // Redirect based on account type if needed
+                response.sendRedirect("indexLogin.jsp");
+            } else {
+                request.setAttribute("error", "Sai username hoặc password!");
+                RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+                dispatcher.forward(request, response);
+            }
+        } catch (Exception e) {
+            request.setAttribute("error", "Có lỗi xảy ra, vui lòng thử lại sau!");
+            RequestDispatcher dispatcher = request.getRequestDispatcher("login.jsp");
+            dispatcher.forward(request, response);
+        }
     }
 
     /**

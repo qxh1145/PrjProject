@@ -32,9 +32,17 @@ public class DBContext {
             return ds.getConnection();
         } catch (NamingException | SQLException e) {
             // Fallback to direct connection if JNDI fails
-            String url = "jdbc:sqlserver://" + SERVER_NAME + ":" + PORT_NUMBER + ";databaseName=" + DB_NAME
-                    + ";encrypt=true;trustServerCertificate=true";
-            return DriverManager.getConnection(url, USERNAME, PASSWORD);
+            try {
+                String url = "jdbc:sqlserver://" + SERVER_NAME + ":" + PORT_NUMBER + ";databaseName=" + DB_NAME
+                        + ";encrypt=true;trustServerCertificate=true;loginTimeout=30;connectRetryCount=3;connectRetryInterval=10";
+                return DriverManager.getConnection(url, USERNAME, PASSWORD);
+            } catch (SQLException ex) {
+                System.err.println("Database connection error details:");
+                System.err.println("Error Code: " + ex.getErrorCode());
+                System.err.println("SQL State: " + ex.getSQLState());
+                System.err.println("Message: " + ex.getMessage());
+                throw ex;
+            }
         }
     }
     
