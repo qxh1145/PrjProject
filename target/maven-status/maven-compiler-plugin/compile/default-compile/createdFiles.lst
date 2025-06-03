@@ -4,6 +4,7 @@ model\Post.class
 service\GeminiService.class
 model\UserName.class
 controller\AIController.class
+controller\LogoutServlet.class
 dao\UserDAO.class
 com\mycompany\projectfinal\JakartaRestConfiguration.class
 controller\CommunityServlet.class

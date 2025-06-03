@@ -1,12 +1,9 @@
 package model;
 
-import java.util.Date;
-
 public class User {
     private String username;
     private String password;
     private String accountType;
-    private Date premiumExpiryDate;
 
     public User() {
     }
@@ -15,14 +12,12 @@ public class User {
         this.username = username;
         this.password = password;
         this.accountType = "Free"; // Default to Free account
-        this.premiumExpiryDate = null;
     }
 
-    public User(String username, String password, String accountType, Date premiumExpiryDate) {
+    public User(String username, String password, String accountType) {
         this.username = username;
         this.password = password;
         this.accountType = accountType;
-        this.premiumExpiryDate = premiumExpiryDate;
     }
 
     public String getUsername() {
@@ -47,13 +42,5 @@ public class User {
 
     public void setAccountType(String accountType) {
         this.accountType = accountType;
-    }
-
-    public Date getPremiumExpiryDate() {
-        return premiumExpiryDate;
-    }
-
-    public void setPremiumExpiryDate(Date premiumExpiryDate) {
-        this.premiumExpiryDate = premiumExpiryDate;
     }
 } 

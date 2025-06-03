@@ -37,8 +37,7 @@ public class UserDAO {
                     return new User(
                         rs.getString("username"),
                         rs.getString("password"),
-                        rs.getString("account_type"),
-                        rs.getTimestamp("premium_expiry_date")
+                        rs.getString("account_type")
                     );
                 }
             }
@@ -75,12 +74,13 @@ public class UserDAO {
      * @return true if registration successful, false otherwise
      */
     public boolean registerUser(User user) {
-        String sql = "INSERT INTO Users (username, password) VALUES (?, ?)";
+        String sql = "INSERT INTO Users (username, password, account_type) VALUES (?, ?, ?)";
         try (Connection conn = db.getConnection();
              PreparedStatement st = conn.prepareStatement(sql)) {
             
             st.setString(1, user.getUsername());
             st.setString(2, user.getPassword());
+            st.setString(3, user.getAccountType());
             
             return st.executeUpdate() > 0;
         } catch (Exception e) {
@@ -105,7 +105,8 @@ public class UserDAO {
                 if (rs.next()) {
                     return new User(
                         rs.getString("username"),
-                        rs.getString("password")
+                        rs.getString("password"),
+                        rs.getString("account_type")
                     );
                 }
             }

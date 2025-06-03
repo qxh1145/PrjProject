@@ -13,8 +13,7 @@ BEGIN
     CREATE TABLE Users (
         username VARCHAR(50) PRIMARY KEY,
         password VARCHAR(50) NOT NULL,
-        account_type VARCHAR(20) DEFAULT 'Free' CHECK (account_type IN ('Free', 'premium')),
-        premium_expiry_date DATETIME NULL
+        account_type VARCHAR(20) DEFAULT 'Free' CHECK (account_type IN ('Free', 'premium'))
     );
 END
 
@@ -24,11 +23,6 @@ BEGIN
     IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('Users') AND name = 'account_type')
     BEGIN
         ALTER TABLE Users ADD account_type VARCHAR(20) DEFAULT 'Free' CHECK (account_type IN ('Free', 'premium'));
-    END
-    
-    IF NOT EXISTS (SELECT * FROM sys.columns WHERE object_id = OBJECT_ID('Users') AND name = 'premium_expiry_date')
-    BEGIN
-        ALTER TABLE Users ADD premium_expiry_date DATETIME NULL;
     END
 END
 
