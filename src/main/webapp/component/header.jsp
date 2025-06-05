@@ -62,7 +62,17 @@
                                         <li><a class="dropdown-item" href="#">Macchiato</a></li>
                                     </ul>
                                 </li>
+                                
                             </ul>
+                        </li>
+                        <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Smoothie</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="recipe/smoothie/fruit-smoothie.jsp">Fruit Smoothie</a></li>
+                                        <li><a class="dropdown-item" href="recipe/smoothie/green-smoothie.jsp">Seed Smoothie</a></li>
+                                        <li><a class="dropdown-item" href="recipe/smoothie/protein-smoothie.jsp">Green Smoothie (Vegeterian)</a></li>
+                                        <li><a class="dropdown-item" href="recipe/smoothie/seed-smoothie.jsp">Smoothie Protein</a></li>
+                                    </ul>
                         </li>
                     </ul>
                 </li>
