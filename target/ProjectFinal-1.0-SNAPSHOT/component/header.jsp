@@ -64,6 +64,47 @@
                                 </li>
                             </ul>
                         </li>
+                        
+                        <!--cocktail--> 
+                        <li class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Cocktail</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Classic Cocktails</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Mojito</a></li>
+                                        <li><a class="dropdown-item" href="#">Margarita</a></li>
+                                        <li><a class="dropdown-item" href="#">Martini</a></li>
+                                        <li><a class="dropdown-item" href="#">Manhattan</a></li>
+                                        <li><a class="dropdown-item" href="#">Cosmopolitan</a></li>
+                                        <li><a class="dropdown-item" href="#">Whiskey Sour</a></li>
+                                        <li><a class="dropdown-item" href="#">Negroni</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Fruit-based Cocktails</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Tequila Sunrise</a></li>
+                                        <li><a class="dropdown-item" href="#">Mai Tai</a></li>
+                                        <li><a class="dropdown-item" href="#">Strawberry Daiquiri</a></li>
+                                        <li><a class="dropdown-item" href="#">Mango Margarita</a></li>
+                                        <li><a class="dropdown-item" href="#">Blue Lagoo</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Mocktails</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Virgin Mojito</a></li>
+                                        <li><a class="dropdown-item" href="#">Shirley Temple</a></li>
+                                        <li><a class="dropdown-item" href="#">Nojito</a></li>
+                                        <li><a class="dropdown-item" href="#">Fruit Punch</a></li>
+                                        <li><a class="dropdown-item" href="#">Sunset Cooler</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--cocktail--> 
+                        
                     </ul>
                 </li>
                 <li class="nav-item">
