@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Template</title>
+    <title>Protein Smoothie Recipes</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
-        /* Reset & Base Styles */
         * {
             margin: 0;
             padding: 0;
@@ -20,14 +19,12 @@
             line-height: 1.6;
         }
 
-        /* Layout Components */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
         }
 
-        /* Header Component */
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
@@ -48,7 +45,6 @@
             opacity: 0.9;
         }
 
-        /* Card Component */
         .card {
             background: white;
             border-radius: 15px;
@@ -63,7 +59,6 @@
             font-size: 2rem;
         }
 
-        /* List Components */
         .list {
             list-style: none;
         }
@@ -73,7 +68,6 @@
             border-bottom: 1px solid #eee;
         }
 
-        /* Steps List Component */
         .steps-list {
             list-style: none;
             counter-reset: step-counter;
@@ -102,7 +96,6 @@
             font-weight: bold;
         }
 
-        /* Tips Component */
         .tips {
             background: #f8f9fa;
             padding: 1.5rem;
@@ -132,7 +125,6 @@
             left: 0;
         }
 
-        /* Related Recipes Component */
         .related-recipes {
             margin-top: 4rem;
         }
@@ -197,7 +189,6 @@
             color: #1a252f;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .container {
                 padding: 1rem;
@@ -219,43 +210,53 @@
 </head>
 <body>
     <!-- Recipe Header -->
-    <div class="recipe-header" style="--header-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-        <h1>How to Make Cold Brew Coffee</h1>
-        <p>The perfect way to enjoy smooth, low-acidity coffee</p>
+    <div class="recipe-header" style="--header-image: url('https://images.unsplash.com/photo-1543362906-acfc16c67564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
+        <h1>Protein Smoothies</h1>
+        <p>Power-packed smoothies for muscle recovery and growth</p>
     </div>
 
     <div class="container">
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb" style="display: flex; list-style: none; padding: 0; margin: 0;">
-                <li class="breadcrumb-item"><a href="../../indexLogin.jsp">Home</a></li>
-                <li class="breadcrumb-item"><a href="../">Coffee</a></li>
-                <li class="breadcrumb-item active" aria-current="page">Cold Brew</li>
+                <li class="breadcrumb-item"><a href="<%= request.getContextPath() %>/indexLogin.jsp">Home</a></li>
+                <li class="breadcrumb-item" style="margin: 0 10px;">/</li>
+                <li class="breadcrumb-item"><a href="../">Smoothies</a></li>
+                <li class="breadcrumb-item" style="margin: 0 10px;">/</li>
+                <li class="breadcrumb-item active" aria-current="page">Protein Smoothie</li>
             </ol>
         </nav>
 
-        <!-- Ingredients Section -->
+        <!-- Basic Recipe Section -->
         <div class="card">
-            <h2 class="card-title">Ingredients</h2>
-            <ul class="list">
-                <li class="list-item">1 cup (100g) coarsely ground coffee beans</li>
-                <li class="list-item">4 cups (950ml) cold water</li>
-                <li class="list-item">Large jar or pitcher</li>
-                <li class="list-item">Fine-mesh strainer or cheesecloth</li>
-                <li class="list-item">Optional: Coffee filter for extra clarity</li>
-            </ul>
+            <h2 class="card-title">Chocolate Protein Power Smoothie</h2>
+            <div class="ingredients">
+                <h3>Ingredients</h3>
+                <ul class="list">
+                    <li class="list-item">1 scoop chocolate protein powder</li>
+                    <li class="list-item">1 banana</li>
+                    <li class="list-item">1 cup Greek yogurt</li>
+                    <li class="list-item">1 tablespoon almond butter</li>
+                    <li class="list-item">1 tablespoon cocoa powder</li>
+                    <li class="list-item">1 cup almond milk</li>
+                    <li class="list-item">1 tablespoon chia seeds</li>
+                    <li class="list-item">1 handful of spinach (optional)</li>
+                    <li class="list-item">4-5 ice cubes</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Instructions Section -->
         <div class="card">
             <h2 class="card-title">Instructions</h2>
             <ol class="steps-list">
-                <li class="step-item">Grind your coffee beans to a coarse consistency, similar to sea salt. This helps prevent over-extraction and ensures a smooth taste.</li>
-                <li class="step-item">Combine the ground coffee and cold water in your jar or pitcher. Stir gently to ensure all grounds are wet.</li>
-                <li class="step-item">Cover the container and let it steep at room temperature for 12-24 hours. The longer you steep, the stronger the flavor will be.</li>
-                <li class="step-item">After steeping, strain the coffee using a fine-mesh strainer or cheesecloth. For an even clearer brew, you can strain it a second time through a coffee filter.</li>
-                <li class="step-item">Dilute the concentrate with water or milk to your taste preference. A typical ratio is 1:1, but you can adjust based on your preference.</li>
-                <li class="step-item">Serve over ice and enjoy! Store any remaining cold brew in the refrigerator for up to 2 weeks.</li>
+                <li class="step-item">Add almond milk and Greek yogurt to the blender first.</li>
+                <li class="step-item">Add protein powder, cocoa powder, and chia seeds.</li>
+                <li class="step-item">Add banana, almond butter, and spinach if using.</li>
+                <li class="step-item">Add ice cubes.</li>
+                <li class="step-item">Blend on high speed until smooth and creamy (about 1-2 minutes).</li>
+                <li class="step-item">Check consistency and add more liquid if needed.</li>
+                <li class="step-item">Pour into glasses and serve immediately.</li>
             </ol>
         </div>
 
@@ -264,42 +265,42 @@
             <div class="tips">
                 <h3 class="tips-title">Pro Tips</h3>
                 <ul class="tips-list">
-                    <li class="tips-item">Use filtered water for the best taste</li>
-                    <li class="tips-item">Experiment with different coffee beans to find your perfect flavor profile</li>
-                    <li class="tips-item">For a stronger brew, increase the coffee-to-water ratio</li>
-                    <li class="tips-item">Add spices like cinnamon or vanilla during the steeping process for unique flavors</li>
-                    <li class="tips-item">Cold brew can be stored in the refrigerator for up to 2 weeks</li>
+                    <li class="tips-item">Use frozen banana for a thicker texture</li>
+                    <li class="tips-item">Add oats for extra sustained energy</li>
+                    <li class="tips-item">Use plant-based protein for vegan option</li>
+                    <li class="tips-item">Add coffee for pre-workout boost</li>
+                    <li class="tips-item">Include collagen powder for extra protein</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Related Recipes Section -->
-        <div class="related-recipes">
-            <h2 class="related-recipes-title">You May Also Like</h2>
+        <!-- Variations Section -->
+        <div class="card">
+            <h2 class="card-title">Popular Variations</h2>
             <div class="recipe-grid">
                 <div class="recipe-card">
-                    <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Vietnamese Iced Coffee" class="recipe-image">
+                    <img src="https://i.pinimg.com/736x/68/44/eb/6844eb33375f89dc0ef9a6f7c0ebff3f.jpg" alt="Vanilla Berry Protein" class="recipe-image">
                     <div class="recipe-content">
-                        <h3 class="recipe-name">Vietnamese Iced Coffee</h3>
-                        <p class="recipe-description">A sweet and strong coffee drink with condensed milk</p>
+                        <h3 class="recipe-name">Vanilla Berry Protein</h3>
+                        <p class="recipe-description">Mixed berries with vanilla protein</p>
                         <a href="#" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
 
                 <div class="recipe-card">
-                    <img src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Nitro Cold Brew" class="recipe-image">
+                    <img src="https://i.pinimg.com/736x/e9/d2/fc/e9d2fcdd148a7b7e105bc2f48c1a9790.jpg" alt="Peanut Butter Power" class="recipe-image">
                     <div class="recipe-content">
-                        <h3 class="recipe-name">Nitro Cold Brew</h3>
-                        <p class="recipe-description">Smooth and creamy coffee with a frothy top</p>
+                        <h3 class="recipe-name">Peanut Butter Power</h3>
+                        <p class="recipe-description">Protein-rich peanut butter blend</p>
                         <a href="#" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
 
                 <div class="recipe-card">
-                    <img src="https://images.unsplash.com/photo-1579888944880-d98341245702?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" alt="Coffee Tonic" class="recipe-image">
+                    <img src="https://i.pinimg.com/736x/78/b7/62/78b7627ac31e320eb1ac7192d98a19d1.jpg" alt="Coffee Protein Kick" class="recipe-image">
                     <div class="recipe-content">
-                        <h3 class="recipe-name">Coffee Tonic</h3>
-                        <p class="recipe-description">Refreshing coffee drink with tonic water</p>
+                        <h3 class="recipe-name">Coffee Protein Kick</h3>
+                        <p class="recipe-description">Pre-workout coffee protein blend</p>
                         <a href="#" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
@@ -307,6 +308,5 @@
         </div>
     </div>
     <!-- Footer -->
-    <%@include file="../../component/footer.jsp" %>
 </body>
-</html>
+</html> 

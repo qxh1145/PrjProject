@@ -38,41 +38,40 @@
                                 <li class="dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">ColdBrew</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="recipe/coffee/htmcoldbrew.jsp">How to make ColdBrew</a></li>
-                                        <li><a class="dropdown-item" href="#">ColdBrew Latte</a></li>
-                                        <li><a class="dropdown-item" href="#">Vanilla Sweet Cream Cold Brew</a></li>
-                                        <li><a class="dropdown-item" href="#">Tropical Cold Brew</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=htmcoldbrew">How to make ColdBrew</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=coldbrew-latte">ColdBrew Latte</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=vanilla-sweet-cream-cold-brew">Vanilla Sweet Cream Cold Brew</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=tropical-cold-brew">Tropical Cold Brew</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Vietnamese Coffee</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Traditional Vietnamese Drip Coffee</a></li>
-                                        <li><a class="dropdown-item" href="#">Bac Xiu</a></li>
-                                        <li><a class="dropdown-item" href="#">Egg Coffee</a></li>
-                                        <li><a class="dropdown-item" href="#">Orange Coffee</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=traditional-vietnamese-drip">Traditional Vietnamese Drip Coffee</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=bac-xiu">Bac Xiu</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=egg-coffee">Egg Coffee</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=orange-coffee">Orange Coffee</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Italian Coffee</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Cappuccino</a></li>
-                                        <li><a class="dropdown-item" href="#">Latte</a></li>
-                                        <li><a class="dropdown-item" href="#">Moka</a></li>
-                                        <li><a class="dropdown-item" href="#">Macchiato</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=cappuccino">Cappuccino</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=latte">Latte</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=moka">Moka</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=macchiato">Macchiato</a></li>
                                     </ul>
                                 </li>
-                                
                             </ul>
                         </li>
                         <li class="dropend">
-                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Smoothie</a>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="recipe/smoothie/fruit-smoothie.jsp">Fruit Smoothie</a></li>
-                                        <li><a class="dropdown-item" href="recipe/smoothie/green-smoothie.jsp">Seed Smoothie</a></li>
-                                        <li><a class="dropdown-item" href="recipe/smoothie/protein-smoothie.jsp">Green Smoothie (Vegeterian)</a></li>
-                                        <li><a class="dropdown-item" href="recipe/smoothie/seed-smoothie.jsp">Smoothie Protein</a></li>
-                                    </ul>
+                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Smoothie</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=fruit-smoothie">Fruit Smoothie</a></li>
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=green-smoothie">Seed Smoothie</a></li>
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=protein-smoothie">Green Smoothie (Vegeterian)</a></li>
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=seed-smoothie">Smoothie Protein</a></li>
+                            </ul>
                         </li>
                     </ul>
                 </li>

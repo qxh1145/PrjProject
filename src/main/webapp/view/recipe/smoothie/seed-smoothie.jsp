@@ -219,8 +219,10 @@
         <!-- Breadcrumb -->
         <nav aria-label="breadcrumb" class="mb-4">
             <ol class="breadcrumb" style="display: flex; list-style: none; padding: 0; margin: 0;">
-                <li class="breadcrumb-item"><a href="../../indexLogin.jsp">Home</a></li>
+                <li class="breadcrumb-item"><a href="<%= request.getContextPath() %>/indexLogin.jsp">Home</a></li>
+                <li class="breadcrumb-item" style="margin: 0 10px;">/</li>
                 <li class="breadcrumb-item"><a href="../">Smoothies</a></li>
+                <li class="breadcrumb-item" style="margin: 0 10px;">/</li>
                 <li class="breadcrumb-item active" aria-current="page">Seed Smoothie</li>
             </ol>
         </nav>
@@ -305,6 +307,5 @@
         </div>
     </div>
     <!-- Footer -->
-    <%@include file="../../component/footer.jsp" %>
 </body>
 </html> 
