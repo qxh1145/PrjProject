@@ -208,6 +208,56 @@
                                         </li>
                                     </ul>
                                 </li>
+                        <%-- add juice --%>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Juices</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Fruit Juices</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Orange juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Passion fruit juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Grape juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Kiwi juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Vegetable Juices</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Celery juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Beetroot juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Cucumber juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Tomato juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Mixed Juices</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Orange & carrot juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Pineapple & passion fruit juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Watermelon & mint juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Mixed vegetable juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Detox/healthy</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Green juice (spinach, apple, cucumber…)</a></li>
+                                                <li><a class="dropdown-item" href="#">Lemon, ginger & honey detox juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Turmeric juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Grapefruit & pineapple juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Tropical Juice</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Tropical Sunrise</a></li>
+                                                <li><a class="dropdown-item" href="#">Summer Breeze</a></li>
+                                                <li><a class="dropdown-item" href="#">Tropical Heart</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Chatbot</a>
