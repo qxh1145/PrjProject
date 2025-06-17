@@ -141,7 +141,7 @@
             <div class="container-fluid">
                 <!-- Brand Logo -->
                 <a class="navbar-brand" href="index.jsp" style="margin-left: 20px;">How to Cook Recipes</a>
-                
+
                 <!-- Navbar Toggler -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
@@ -208,27 +208,77 @@
                                         </li>
                                     </ul>
                                 </li>
+                                <%-- add juice --%>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Juices</a>
+                                    <ul class="dropdown-menu">
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Fruit Juices</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Orange juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Passion fruit juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Grape juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Kiwi juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Vegetable Juices</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Celery juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Beetroot juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Cucumber juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Tomato juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Mixed Juices</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Orange & carrot juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Pineapple & passion fruit juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Watermelon & mint juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Mixed vegetable juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Detox/healthy</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Green juice (spinach, apple, cucumber…)</a></li>
+                                                <li><a class="dropdown-item" href="#">Lemon, ginger & honey detox juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Turmeric juice</a></li>
+                                                <li><a class="dropdown-item" href="#">Grapefruit & pineapple juice</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="dropend">
+                                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Tropical Juice</a>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#">Tropical Sunrise</a></li>
+                                                <li><a class="dropdown-item" href="#">Summer Breeze</a></li>
+                                                <li><a class="dropdown-item" href="#">Tropical Heart</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
                             </ul>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Chatbot</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#" id="communityLink">Community</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" 
-                                   data-bs-toggle="dropdown" aria-expanded="false">
-                                    Tools
-                                </a>
-                                <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
-                                    <li><a class="dropdown-item" href="#">Recipe Calculator</a></li>
-                                    <li><a class="dropdown-item" href="#">Unit Converter</a></li>
-                                    <li><a class="dropdown-item" href="#">Timer</a></li>
-                                    <li><a class="dropdown-item" href="#">Shopping List</a></li>
-                                </ul>
-                            </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Chatbot</a>
                         </li>
-                        
+                        <li class="nav-item">
+                            <a class="nav-link disabled" href="#" id="communityLink">Community</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Tools
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="toolsDropdown">
+                                <li><a class="dropdown-item" href="#">Recipe Calculator</a></li>
+                                <li><a class="dropdown-item" href="#">Unit Converter</a></li>
+                                <li><a class="dropdown-item" href="#">Timer</a></li>
+                                <li><a class="dropdown-item" href="#">Shopping List</a></li>
+                            </ul>
+                        </li>
+                        </li>
+
                     </ul>
 
                     <!-- Right Side Buttons -->
@@ -239,7 +289,7 @@
                 </div>
             </div>
         </nav>
-        
+
 
         <!-- Main Content -->
         <div class="main-content">
