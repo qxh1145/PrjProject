@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #00796B;">
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html" style="margin-left: 20px;">How to Cook Recipes</a>
-        
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,32 +38,84 @@
                                 <li class="dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">ColdBrew</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="recipe/coffee/htmcoldbrew.jsp">How to make ColdBrew</a></li>
-                                        <li><a class="dropdown-item" href="#">ColdBrew Latte</a></li>
-                                        <li><a class="dropdown-item" href="#">Vanilla Sweet Cream Cold Brew</a></li>
-                                        <li><a class="dropdown-item" href="#">Tropical Cold Brew</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=htmcoldbrew">How to make ColdBrew</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=coldbrew-latte">ColdBrew Latte</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=vanilla-sweet-cream-cold-brew">Vanilla Sweet Cream Cold Brew</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=tropical-cold-brew">Tropical Cold Brew</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Vietnamese Coffee</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Traditional Vietnamese Drip Coffee</a></li>
-                                        <li><a class="dropdown-item" href="#">Bac Xiu</a></li>
-                                        <li><a class="dropdown-item" href="#">Egg Coffee</a></li>
-                                        <li><a class="dropdown-item" href="#">Orange Coffee</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=traditional-vietnamese-drip">Traditional Vietnamese Drip Coffee</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=bac-xiu">Bac Xiu</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=egg-coffee">Egg Coffee</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=orange-coffee">Orange Coffee</a></li>
                                     </ul>
                                 </li>
                                 <li class="dropend">
                                     <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Italian Coffee</a>
                                     <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Cappuccino</a></li>
-                                        <li><a class="dropdown-item" href="#">Latte</a></li>
-                                        <li><a class="dropdown-item" href="#">Moka</a></li>
-                                        <li><a class="dropdown-item" href="#">Macchiato</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=cappuccino">Cappuccino</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=latte">Latte</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=moka">Moka</a></li>
+                                        <li><a class="dropdown-item" href="navigation?action=recipe&category=coffee&recipe=macchiato">Macchiato</a></li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
+                        <li class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Smoothie</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=fruit-smoothie">Fruit Smoothie</a></li>
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=green-smoothie">Seed Smoothie</a></li>
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=protein-smoothie">Green Smoothie (Vegeterian)</a></li>
+                                <li><a class="dropdown-item" href="navigation?action=recipe&category=smoothie&recipe=seed-smoothie">Smoothie Protein</a></li>
+                            </ul>
+                        </li>
+                        <%-- add list juice by diemkieu --%>
+                        <li class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Juices</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Fruit Juices</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="view/recipe/juices/fruitsJuices/passionJuices.jsp">Passion fruit juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/fruitsJuices/grapeJuices.jsp">Grapefruit juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/fruitsJuices/orangeJuices.jsp">Orange juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/fruitsJuices/tropicalFruitJuices.jsp">Tropical Fruit Juices</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Vegetable Juices</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="view/recipe/juices/vegetableJuices/celeryJuice.jsp">Celery juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/vegetableJuices/beetrootJuice.jsp">Beetroot juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/vegetableJuices/cucumberJuice.jsp">Cucumber juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/vegetableJuices/carrotJuice.jsp">Carrot juice</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Mixed Juices</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="view/recipe/juices/mixedJuices/appleCarrotJuice.jsp">Apple & carrot juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/mixedJuices/pineapplePassionJuice.jsp">Pineapple & passion fruit juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/mixedJuices/watermelonMintJuice.jsp">Watermelon & mint juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/mixedJuices/mixedVegetableJuice.jsp">Mixed vegetable juice</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Detox/Healthy</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="view/recipe/juices/detox/greenJuice.jsp">Green juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/detox/detoxJuice.jsp">Detox juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/detox/turmericJuice.jsp">Turmeric juice</a></li>
+                                        <li><a class="dropdown-item" href="view/recipe/juices/detox/immunityBoostingJuice.jsp">Immunity Boosting</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <%--//end list --%>
                     </ul>
                 </li>
                 <li class="nav-item">
@@ -98,8 +150,8 @@
                             String premiumExpiryDate = (String) session.getAttribute("premiumExpiryDate");
                         %>
                         <% if (username != null) { %>
-                            <span class="text-light me-3"><%= username %></span>
-                            <i class="fas fa-chevron-down text-light"></i>
+                        <span class="text-light me-3"><%= username %></span>
+                        <i class="fas fa-chevron-down text-light"></i>
                         <% } %>
                     </div>
                     <ul class="dropdown-menu dropdown-menu-end">
@@ -112,12 +164,12 @@
                             </div>
                         </li>
                         <% if ("premium".equals(accountType)) { %>
-                            <li>
-                                <div class="dropdown-item">
-                                    <strong>Premium Expires:</strong><br>
-                                    <%= premiumExpiryDate != null ? premiumExpiryDate : "N/A" %>
-                                </div>
-                            </li>
+                        <li>
+                            <div class="dropdown-item">
+                                <strong>Premium Expires:</strong><br>
+                                <%= premiumExpiryDate != null ? premiumExpiryDate : "N/A" %>
+                            </div>
+                        </li>
                         <% } %>
                         <li><hr class="dropdown-divider"></li>
                         <li>
@@ -128,62 +180,62 @@
                     </ul>
                 </div>
             </div>
-            
+
         </div>
     </div>
 </nav>
 <style>
- .navbar {
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
+    .navbar {
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
 
-        .dropdown-menu {
-            margin-top: 0.5rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-        }
-        
-        .dropdown-item {
-            transition: all 0.2s;
-        }
-        .dropdown-item:hover {
-            background-color: #f8f9fa;
-        }
-        .btn-outline-light:hover {
-            background-color: #fff;
-            color: #00796B;
-        }
-        .btn-light:hover {
-            background-color: #e9ecef;
-            color: #00796B;
-        }
-        footer a:hover {
-            color: #ffc107 !important;
-        }
-        .nav-link.disabled {
-            pointer-events: none;
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        .nav-link.disabled:hover::after {
-            content: "You must login to use this";
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 12px;
-            white-space: nowrap;
-            z-index: 1000;
-        }
-        .dropdown-menu .dropdown-toggle::after {
+    .dropdown-menu {
+        margin-top: 0.5rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+
+    .dropdown-item {
+        transition: all 0.2s;
+    }
+    .dropdown-item:hover {
+        background-color: #f8f9fa;
+    }
+    .btn-outline-light:hover {
+        background-color: #fff;
+        color: #00796B;
+    }
+    .btn-light:hover {
+        background-color: #e9ecef;
+        color: #00796B;
+    }
+    footer a:hover {
+        color: #ffc107 !important;
+    }
+    .nav-link.disabled {
+        pointer-events: none;
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
+    .nav-link.disabled:hover::after {
+        content: "You must login to use this";
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 4px;
+        font-size: 12px;
+        white-space: nowrap;
+        z-index: 1000;
+    }
+    .dropdown-menu .dropdown-toggle::after {
         float: right;
         margin-left: 5px;
     }
- 
+
     .dropdown-menu .dropdown-menu {
         top: 0;
         left: 100%;

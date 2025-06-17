@@ -1,13 +1,11 @@
 controller\RegisterHandle.class
 dao\DBContext.class
 model\Post.class
-service\GeminiService.class
 model\UserName.class
-controller\AIController.class
+controller\NavigationServlet.class
 controller\LogoutServlet.class
 dao\UserDAO.class
 com\mycompany\projectfinal\JakartaRestConfiguration.class
-controller\CommunityServlet.class
 model\AIResponse.class
 controller\CreatePostServlet.class
 controller\LoginHandle.class
