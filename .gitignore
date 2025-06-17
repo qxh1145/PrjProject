@@ -13,3 +13,4 @@
 
 # Ignore configuration files containing sensitive data
 src/main/resources/config.properties 
+/target/
