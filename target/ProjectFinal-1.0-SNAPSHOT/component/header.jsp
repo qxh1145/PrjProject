@@ -115,6 +115,45 @@
                                 </li>
                             </ul>
                         </li>
+                        <!--add cocktail-->
+                        <li class="dropend">
+                            <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Cocktail</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Classic Cocktails</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/ClassicCocktails/cosmopolitan.jsp">Cosmopolitan </a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/ClassicCocktails/manhattan.jsp">Manhattan</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/ClassicCocktails/margarita.jsp">Margarita</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/ClassicCocktails/martini.jsp">Martini </a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/ClassicCocktails/mojito.jsp">Mojito </a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/ClassicCocktails/negroni.jsp">Negroni </a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/ClassicCocktails/whiskey-sour.jsp">Whiskey Sour </a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Fruit-based Cocktails</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Fruit_basedCocktails/blue-lagoon.jsp">Blue Lagoon</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Fruit_basedCocktails/mai-tai.jsp">Mai Tai</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Fruit_basedCocktails/mango-margarita.jsp">Mango Margarita</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Fruit_basedCocktails/strawberry-daiquiri.jsp">Strawberry Daiquiri</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Fruit_basedCocktails/tequila-sunrise.jsp">Tequila Sunrise</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropend">
+                                    <a class="dropdown-item dropdown-toggle" href="#" data-bs-toggle="dropdown">Mocktails</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Mocktails/fruit-punch.jsp">Fruit Punch</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Mocktails/nojito.jsp">Nojito </a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Mocktails/shirley-temple.jsp">Shirley Temple</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Mocktails/sunset-cooler.jsp">Sunset Cooler</a></li>
+                                        <li><a class="dropdown-item" href="<%= request.getContextPath() %>/view/recipe/cocktail/Mocktails/virgin-mojito.jsp">Virgin Mojito</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!--add cocktail-->
                         <%--//end list --%>
                     </ul>
                 </li>
