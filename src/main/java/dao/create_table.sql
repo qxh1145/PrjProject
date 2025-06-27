@@ -31,15 +31,16 @@ BEGIN
     CREATE TABLE Posts (
     post_id INT IDENTITY(1,1) PRIMARY KEY,
     username VARCHAR(50) FOREIGN KEY REFERENCES Users(username),
-    content VARCHAR(MAX),  -- <-- sửa TEXT thành VARCHAR(MAX)
-    image_url VARCHAR(255),
+    content VARCHAR(MAX),
+    image_path VARCHAR(255),
     created_at DATETIME DEFAULT GETDATE(),
     CONSTRAINT check_content_or_image CHECK (
         (content IS NOT NULL AND LEN(content) > 0) OR 
-        (image_url IS NOT NULL AND LEN(image_url) > 0)
+        (image_path IS NOT NULL AND LEN(image_path) > 0)
     )
 );
 END
+
 
 -- Thêm dữ liệu mẫu cho Posts nếu chưa có
 IF NOT EXISTS (SELECT * FROM Posts)

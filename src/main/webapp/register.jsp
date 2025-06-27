@@ -126,7 +126,7 @@
             <h1>Create Account</h1>
             <p>Please fill in your details</p>
         </div>
-        <form action="RegisterHandle" method="post" onsubmit="return validateForm()">
+        <form action="main?action=register" method="post" onsubmit="return validateForm()">
             <div class="form-group">
                 <i class="fas fa-user"></i>
                 <input type="text" class="form-control" name="username" placeholder="Username" required />

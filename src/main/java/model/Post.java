@@ -1,21 +1,30 @@
 package model;
 
 import java.sql.Timestamp;
+import java.util.Date;
 
 public class Post {
-    private int postId;
+    private int id;
     private String username;
     private String content;
-    private String imageUrl;
+    private String imagePath;
     private Timestamp createdAt;
 
-    // Getters and Setters
-    public int getPostId() {
-        return postId;
+    public Post() {
     }
 
-    public void setPostId(int postId) {
-        this.postId = postId;
+    public Post( String username, String content, String imagePath) {
+        this.username = username;
+        this.content = content;
+        this.imagePath = imagePath;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getUsername() {
@@ -23,7 +32,7 @@ public class Post {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        username = username;
     }
 
     public String getContent() {
@@ -34,12 +43,12 @@ public class Post {
         this.content = content;
     }
 
-    public String getImageUrl() {
-        return imageUrl;
+    public String getImagePath() {
+        return imagePath;
     }
 
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
+    public void setImagePath(String imagePath) {
+        this.imagePath = imagePath;
     }
 
     public Timestamp getCreatedAt() {
@@ -49,4 +58,6 @@ public class Post {
     public void setCreatedAt(Timestamp createdAt) {
         this.createdAt = createdAt;
     }
+    
+    
 } 

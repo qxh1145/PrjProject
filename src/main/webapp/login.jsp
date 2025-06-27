@@ -126,7 +126,7 @@
             <h1>Welcome Back</h1>
             <p>Please login to your account</p>
         </div>
-        <form action="LoginHandle" method="post">
+        <form action="main?action=login" method="post">
             <div class="form-group">
                 <i class="fas fa-user"></i>
                 <input type="text" class="form-control" name="username" placeholder="Username" required />

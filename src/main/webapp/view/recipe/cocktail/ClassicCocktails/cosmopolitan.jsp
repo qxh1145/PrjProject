@@ -197,6 +197,19 @@
     </style>
 </head>
 <body>
+  <% if (request.getAttribute("showLockOverlay") != null) { %>
+    <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,1);z-index:9999;display:flex;align-items:center;justify-content:center;flex-direction:column;">
+        <div style="background:#fff;border-radius:16px;padding:40px 32px;box-shadow:0 8px 32px rgba(0,0,0,0.18);text-align:center;min-width:320px;max-width:90vw;">
+            <i class="fas fa-lock" style="font-size:3rem;color:#00796B;margin-bottom:18px;"></i>
+            <div style="font-size:1.25rem;font-weight:600;margin-bottom:18px;">Bạn cần nâng cấp tài khoản để xem nội dung này</div>
+            <div style="display:flex;gap:16px;justify-content:center;">
+                <a href="indexLogin.jsp" style="padding:10px 22px;border-radius:8px;background:#eee;color:#333;text-decoration:none;font-weight:500;transition:background 0.2s;">Back to Home Page</a>
+                <a href="BuyPremium.jsp" style="padding:10px 22px;border-radius:8px;background:#00796B;color:#fff;text-decoration:none;font-weight:500;transition:background 0.2s;">Nâng cấp tài khoản</a>
+            </div>
+        </div>
+    </div>
+  <% } %>
+
   <!-- Recipe Header -->
   <div class="recipe-header" style="--header-image: url('https://images.unsplash.com/photo-1630987085280-f7b8e2a2e994?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
     <h1>How to Make a Cosmopolitan</h1>
