@@ -208,10 +208,14 @@
                             <img src="images/QRBank.jpg" alt="QR Code" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <p class="text-muted mt-3">Please scan the QR code above to complete your payment</p>
+                        <div class="mt-3">
+                            <input type="text" id="userEmailInput" class="form-control" placeholder="Enter your email" required />
+                        </div>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-success" onclick="confirmPayment()">Confirm Payment</button>
                 </div>
             </div>
         </div>
@@ -223,10 +227,24 @@
         <img src="images/QRBank.jpg" alt="QR Code Zoomed">
     </div>
 
+    <!-- Alert message -->
+    <div id="paymentAlert" class="alert d-none position-fixed top-0 start-50 translate-middle-x mt-3" style="z-index: 2000; min-width: 300px; max-width: 90%;"></div>
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <script>
+        function showAlert(message, type = 'danger') {
+            const alertDiv = document.getElementById('paymentAlert');
+            alertDiv.className = `alert alert-${type} position-fixed top-0 start-50 translate-middle-x mt-3 show`;
+            alertDiv.innerHTML = message;
+            alertDiv.style.display = 'block';
+            setTimeout(() => {
+                alertDiv.className = 'alert d-none position-fixed top-0 start-50 translate-middle-x mt-3';
+                alertDiv.style.display = 'none';
+            }, 3000);
+        }
+
         function openZoomModal() {
             document.getElementById('zoomModal').style.display = 'flex';
         }
@@ -241,6 +259,53 @@
                 closeZoomModal();
             }
         });
+        
+        function confirmPayment() {
+            // Lấy email từ input
+            const userEmail = document.getElementById('userEmailInput').value.trim();
+            if (!userEmail) {
+                showAlert('Please enter your email to confirm payment.', 'danger');
+                return;
+            }
+            const confirmBtn = event.target;
+            const originalText = confirmBtn.innerHTML;
+            confirmBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
+            confirmBtn.disabled = true;
+            sendConfirmationEmail(userEmail, confirmBtn, originalText);
+        }
+        
+        function sendConfirmationEmail(userEmail, confirmBtn, originalText) {
+            // Create form data for email sending
+            const formData = new FormData();
+            formData.append('userEmail', userEmail);
+            formData.append('amount', '100,000 VND');
+            formData.append('plan', 'Lifetime Premium');
+            formData.append('paymentMethod', 'QR Code Transfer');
+            formData.append('requestType', 'Account Upgrade Request');
+            
+            // Send request to server with absolute path
+            fetch('/ProjectFinal/confirmPayment', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) return;
+                return response.json();
+            })
+            .then(data => {
+                // Only close modal and show alert if data exists and success
+                if (data && data.success) {
+                    const modal = bootstrap.Modal.getInstance(document.getElementById('paymentModal'));
+                    modal.hide();
+                    showAlert('Payment confirmed successfully! Thank you for your purchase.', 'success');
+                }
+            })
+            .finally(() => {
+                // Restore button state
+                confirmBtn.innerHTML = originalText;
+                confirmBtn.disabled = false;
+            });
+        }
     </script>
 </body>
 </html>
