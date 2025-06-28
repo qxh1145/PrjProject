@@ -7,6 +7,7 @@
     <title>All Fruit Tea Recipes</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body { background: linear-gradient(120deg, #f5f5f5 60%, #ffe0b2 100%); color: #333; font-family: 'Poppins', sans-serif; padding-top: 70px; }
         .container { max-width: 1200px; margin: 0 auto; padding: 2.5rem 1rem; }
@@ -29,6 +30,7 @@
 </head>
 <body>
     <div class="container">
+        <%@ include file="../../../../component/header.jsp" %>
         <div class="overview-header">
             <h1>All Fruit Tea Recipes</h1>
             <p>Fresh, fruity, and full of flavor – explore our fruit tea collection!</p>
@@ -79,5 +81,6 @@
         </div>
     </div>
     <%@ include file="../../../../component/footer.jsp" %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html> 

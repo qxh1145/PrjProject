@@ -49,5 +49,24 @@ BEGIN
     VALUES ('admin', 'Welcome to our coffee community! Share your favorite coffee recipes and experiences here.', GETDATE());
 END
 
+-- Thêm dữ liệu mẫu cho Users nếu chưa có
+IF NOT EXISTS (SELECT * FROM Users WHERE username = 'admin')
+BEGIN
+    INSERT INTO Users (username, password, account_type)
+    VALUES ('admin', 'admin123', 'premium');
+END
+
+IF NOT EXISTS (SELECT * FROM Users WHERE username = 'user1')
+BEGIN
+    INSERT INTO Users (username, password, account_type)
+    VALUES ('user1', 'password123', 'Free');
+END
+
+IF NOT EXISTS (SELECT * FROM Users WHERE username = 'user2')
+BEGIN
+    INSERT INTO Users (username, password, account_type)
+    VALUES ('user2', 'password123', 'premium');
+END
+
 select * from Users
 select * from Posts

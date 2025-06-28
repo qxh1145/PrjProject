@@ -205,7 +205,7 @@
                         <h6>Scan QR Code to Pay</h6>
                         <p class="text-muted">Amount: 100,000 VND</p>
                         <div class="qr-code-placeholder" onclick="openZoomModal()">
-                            <img src="images/QRBank.jpg" alt="QR Code" style="width: 100%; height: 100%; object-fit: contain;">
+                            <img src="images\img.png" alt="QR Code" style="width: 100%; height: 100%; object-fit: contain;">
                         </div>
                         <p class="text-muted mt-3">Please scan the QR code above to complete your payment</p>
                         <div class="mt-3">
@@ -224,7 +224,7 @@
     <!-- Zoom Modal -->
     <div class="modal-zoom" id="zoomModal" onclick="closeZoomModal()">
         <span class="close-zoom" onclick="closeZoomModal()">&times;</span>
-        <img src="images/QRBank.jpg" alt="QR Code Zoomed">
+        <img src="images\img.png" alt="QR Code Zoomed">
     </div>
 
     <!-- Alert message -->

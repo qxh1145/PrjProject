@@ -1,6 +1,8 @@
+controller\UpdateAccountTypeServlet.class
 model\PostService.class
 controller\ConfirmPaymentServlet$1.class
 controller\ConfirmPaymentServlet.class
+controller\GetUsersServlet.class
 dao\PostDAO.class
 dao\DBContext.class
 model\Post.class
