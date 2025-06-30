@@ -49,6 +49,7 @@ BEGIN
     VALUES ('admin', 'Welcome to our coffee community! Share your favorite coffee recipes and experiences here.', GETDATE());
 END
 
+<<<<<<< HEAD
 -- Tạo bảng payments để lưu trữ thông tin thanh toán
 IF NOT EXISTS (SELECT * FROM sys.tables WHERE name = 'payments')
 BEGIN
@@ -98,6 +99,26 @@ END
 
 -- Cập nhật tài khoản admin thành Premium
 UPDATE Users SET account_type = 'premium' WHERE username = 'admin';
+=======
+-- Thêm dữ liệu mẫu cho Users nếu chưa có
+IF NOT EXISTS (SELECT * FROM Users WHERE username = 'admin')
+BEGIN
+    INSERT INTO Users (username, password, account_type)
+    VALUES ('admin', 'admin123', 'premium');
+END
+
+IF NOT EXISTS (SELECT * FROM Users WHERE username = 'user1')
+BEGIN
+    INSERT INTO Users (username, password, account_type)
+    VALUES ('user1', 'password123', 'Free');
+END
+
+IF NOT EXISTS (SELECT * FROM Users WHERE username = 'user2')
+BEGIN
+    INSERT INTO Users (username, password, account_type)
+    VALUES ('user2', 'password123', 'premium');
+END
+>>>>>>> 90e75cb285a43ef1da25ced5dd4484be0c7172b1
 
 select * from Users
 select * from Posts

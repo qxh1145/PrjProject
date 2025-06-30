@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
+<<<<<<< HEAD
 import java.io.BufferedReader;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -22,15 +23,68 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.NamingException;
+=======
+import java.util.List;
+import java.util.Scanner;
+import model.User;
+import org.json.JSONArray;
+import org.json.JSONObject;
+>>>>>>> 90e75cb285a43ef1da25ced5dd4484be0c7172b1
 
 @WebServlet(name = "MainServlet", urlPatterns = {"/main"})
 public class MainServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+<<<<<<< HEAD
         try {
             String action = request.getParameter("action");
             if (action == null) {
+=======
+        String action = request.getParameter("action");
+        if (action == null) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
+        switch (action) {
+            case "feed":
+                handleFeed(request, response);
+                break;
+            case "navigation":
+                handleNavigation(request, response);
+                break;
+            case "login":
+                handleLoginGet(request, response);
+                break;
+            case "logout":
+                handleLogout(request, response);
+                break;
+            case "register":
+                handleRegisterGet(request, response);
+                break;
+            case "post":
+                handlePostGet(request, response);
+                break;
+            case "recipe":
+                handleRecipePage(request, response);
+                break;
+            case "recipeOverview":
+                handleRecipeOverview(request, response);
+                break;
+            case "recipeDetail":
+                handleRecipeDetail(request, response);
+                break;
+            case "adminPanel":
+                handleAdminPanel(request, response);
+                break;
+            case "getUsers":
+                handleGetUsers(request, response);
+                break;
+            case "updateAccountType":
+                handleUpdateAccountType(request, response);
+                break;
+            default:
+>>>>>>> 90e75cb285a43ef1da25ced5dd4484be0c7172b1
                 response.sendRedirect("index.jsp");
                 return;
             }
@@ -520,5 +574,209 @@ public class MainServlet extends HttpServlet {
     @Override
     public String getServletInfo() {
         return "Main unified servlet";
+    }
+    
+    // Admin Panel Methods
+    private void handleAdminPanel(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        System.out.println("DEBUG: handleAdminPanel called");
+        
+        // Check if user is logged in
+        HttpSession session = request.getSession(false);
+        System.out.println("DEBUG: Session: " + session);
+        
+        if (session == null || session.getAttribute("user") == null) {
+            System.out.println("DEBUG: User not logged in, redirecting to login");
+            response.sendRedirect("indexLogin.jsp");
+            return;
+        }
+        
+        // Check if user is admin
+        String username = (String) session.getAttribute("user");
+        System.out.println("DEBUG: Username from session: " + username);
+        
+        if (!"admin".equals(username)) {
+            System.out.println("DEBUG: User is not admin, redirecting to login");
+            response.sendRedirect("indexLogin.jsp");
+            return;
+        }
+        
+        System.out.println("DEBUG: User is admin, proceeding");
+        
+        // Set admin info in request attributes
+        request.setAttribute("adminUsername", username);
+        
+        // Load users data and pass to JSP
+        try {
+            UserDAO userDAO = new UserDAO();
+            List<User> users = userDAO.getAllUsers();
+            request.setAttribute("users", users);
+            System.out.println("DEBUG: Loaded " + users.size() + " users for admin panel");
+            
+            // Debug: Print each user
+            for (User user : users) {
+                System.out.println("DEBUG: User - " + user.getUsername() + " : " + user.getAccountType());
+            }
+        } catch (Exception e) {
+            System.err.println("Error loading users: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        System.out.println("DEBUG: Forwarding to admin panel JSP");
+        
+        // Forward to admin panel JSP
+        request.getRequestDispatcher("/admin/adminPanel.jsp").forward(request, response);
+    }
+    
+    private void handleGetUsers(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter out = response.getWriter();
+        JSONObject jsonResponse = new JSONObject();
+        
+        try {
+            // Check if user is admin
+            HttpSession session = request.getSession(false);
+            if (session == null || session.getAttribute("user") == null) {
+                jsonResponse.put("success", false);
+                jsonResponse.put("message", "Not logged in");
+                out.print(jsonResponse.toString());
+                return;
+            }
+            
+            String username = (String) session.getAttribute("user");
+            if (!"admin".equals(username)) {
+                jsonResponse.put("success", false);
+                jsonResponse.put("message", "Unauthorized access");
+                out.print(jsonResponse.toString());
+                return;
+            }
+            
+            // Get all users
+            UserDAO userDAO = new UserDAO();
+            List<User> users = userDAO.getAllUsers();
+            
+            System.out.println("DEBUG: Found " + users.size() + " users");
+            
+            JSONArray usersArray = new JSONArray();
+            for (User user : users) {
+                JSONObject userObj = new JSONObject();
+                userObj.put("username", user.getUsername());
+                userObj.put("password", user.getPassword());
+                userObj.put("accountType", user.getAccountType());
+                usersArray.put(userObj);
+                
+                System.out.println("DEBUG: Added user: " + user.getUsername() + " - " + user.getAccountType());
+            }
+            
+            jsonResponse.put("success", true);
+            jsonResponse.put("users", usersArray);
+            
+        } catch (Exception e) {
+            jsonResponse.put("success", false);
+            jsonResponse.put("message", "Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        out.print(jsonResponse.toString());
+    }
+    
+    private void handleUpdateAccountType(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        response.setContentType("application/json");
+        response.setCharacterEncoding("UTF-8");
+        PrintWriter out = response.getWriter();
+        JSONObject jsonResponse = new JSONObject();
+        
+        try {
+            // Check if user is admin
+            HttpSession session = request.getSession(false);
+            if (session == null || session.getAttribute("user") == null) {
+                jsonResponse.put("success", false);
+                jsonResponse.put("message", "Not logged in");
+                out.print(jsonResponse.toString());
+                return;
+            }
+            
+            String adminUsername = (String) session.getAttribute("user");
+            if (!"admin".equals(adminUsername)) {
+                jsonResponse.put("success", false);
+                jsonResponse.put("message", "Unauthorized access");
+                out.print(jsonResponse.toString());
+                return;
+            }
+            
+            // Read JSON request body
+            Scanner scanner = new Scanner(request.getReader());
+            StringBuilder requestBody = new StringBuilder();
+            while (scanner.hasNextLine()) {
+                requestBody.append(scanner.nextLine());
+            }
+            scanner.close();
+            
+            JSONObject requestData = new JSONObject(requestBody.toString());
+            String username = requestData.getString("username");
+            String newAccountType = requestData.getString("newAccountType");
+            
+            System.out.println("DEBUG: Updating account type for user: " + username + " to: " + newAccountType);
+            
+            // Validate input
+            if (username == null || username.trim().isEmpty() || 
+                newAccountType == null || newAccountType.trim().isEmpty()) {
+                jsonResponse.put("success", false);
+                jsonResponse.put("message", "Invalid input parameters");
+                out.print(jsonResponse.toString());
+                return;
+            }
+            
+            // Update account type
+            UserDAO userDAO = new UserDAO();
+            boolean success = userDAO.updateAccountType(username, newAccountType);
+            
+            System.out.println("DEBUG: Update result: " + success);
+            
+            if (success) {
+                // Log the action
+                logAccountUpdate(adminUsername, username, newAccountType);
+                
+                jsonResponse.put("success", true);
+                jsonResponse.put("message", "Account type updated successfully");
+            } else {
+                jsonResponse.put("success", false);
+                jsonResponse.put("message", "Failed to update account type");
+            }
+            
+        } catch (Exception e) {
+            jsonResponse.put("success", false);
+            jsonResponse.put("message", "Error: " + e.getMessage());
+            e.printStackTrace();
+        }
+        
+        out.print(jsonResponse.toString());
+    }
+    
+    private void logAccountUpdate(String adminUsername, String targetUsername, String newAccountType) {
+        try {
+            java.time.LocalDateTime now = java.time.LocalDateTime.now();
+            java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+            String timestamp = now.format(formatter);
+            
+            String action = "upgrade".equals(newAccountType) ? "UPGRADED" : "DOWNGRADED";
+            String logMessage = String.format(
+                "[%s] ADMIN: %s %s account type for user: %s to: %s",
+                timestamp, adminUsername, action, targetUsername, newAccountType
+            );
+            
+            System.out.println("=== ACCOUNT UPDATE LOG ===");
+            System.out.println(logMessage);
+            System.out.println("==========================");
+            
+        } catch (Exception e) {
+            System.err.println("Error logging account update: " + e.getMessage());
+        }
     }
 } 

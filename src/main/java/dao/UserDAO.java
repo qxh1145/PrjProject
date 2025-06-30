@@ -113,6 +113,7 @@ public class UserDAO {
         }
         return null;
     }
+<<<<<<< HEAD
 
     public boolean upgradeToPremium(String username) throws NamingException {
         String sql = "UPDATE Users SET account_type = 'premium' WHERE username = ?";
@@ -122,6 +123,59 @@ public class UserDAO {
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
             System.err.println("Error upgrading user to premium: " + e.getMessage());
+=======
+    
+    /**
+     * Gets all users from the database
+     * @return List of all users
+     */
+    public java.util.List<User> getAllUsers() {
+        java.util.List<User> users = new java.util.ArrayList<>();
+        String sql = "SELECT username, password, account_type FROM Users ORDER BY username";
+        
+        try (Connection conn = db.getConnection();
+             PreparedStatement st = conn.prepareStatement(sql);
+             ResultSet rs = st.executeQuery()) {
+            
+            while (rs.next()) {
+                User user = new User(
+                    rs.getString("username"),
+                    rs.getString("password"),
+                    rs.getString("account_type")
+                );
+                users.add(user);
+            }
+        } catch (Exception e) {
+            System.err.println("Error getting all users: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return users;
+    }
+    
+    /**
+     * Updates the account type of a user
+     * @param username the username to update
+     * @param newAccountType the new account type
+     * @return true if update successful, false otherwise
+     */
+    public boolean updateAccountType(String username, String newAccountType) {
+        String sql = "UPDATE Users SET account_type = ? WHERE username = ?";
+        try (Connection conn = db.getConnection();
+             PreparedStatement st = conn.prepareStatement(sql)) {
+            
+            st.setString(1, newAccountType);
+            st.setString(2, username);
+            
+            System.out.println("DEBUG: Executing SQL: UPDATE Users SET account_type = '" + newAccountType + "' WHERE username = '" + username + "'");
+            
+            int rowsAffected = st.executeUpdate();
+            System.out.println("DEBUG: Rows affected: " + rowsAffected);
+            
+            return rowsAffected > 0;
+        } catch (Exception e) {
+            System.err.println("Error updating account type: " + e.getMessage());
+            e.printStackTrace();
+>>>>>>> 90e75cb285a43ef1da25ced5dd4484be0c7172b1
             return false;
         }
     }

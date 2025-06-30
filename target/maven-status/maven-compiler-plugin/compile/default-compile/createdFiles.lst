@@ -1,15 +1,30 @@
+<<<<<<< HEAD
 controller\SendPaymentNotificationServlet$1.class
 model\PostService.class
 dao\PostDAO.class
 model\Payment.class
+=======
+controller\UpdateAccountTypeServlet.class
+model\PostService.class
+controller\ConfirmPaymentServlet$1.class
+controller\ConfirmPaymentServlet.class
+controller\GetUsersServlet.class
+dao\PostDAO.class
+>>>>>>> 90e75cb285a43ef1da25ced5dd4484be0c7172b1
 dao\DBContext.class
 model\Post.class
 model\UserName.class
 controller\MainServlet.class
+<<<<<<< HEAD
 dao\PaymentDAO.class
 dao\UserDAO.class
 com\mycompany\projectfinal\JakartaRestConfiguration.class
 model\AIResponse.class
 controller\SendPaymentNotificationServlet.class
+=======
+dao\UserDAO.class
+com\mycompany\projectfinal\JakartaRestConfiguration.class
+model\AIResponse.class
+>>>>>>> 90e75cb285a43ef1da25ced5dd4484be0c7172b1
 com\mycompany\projectfinal\resources\JakartaEE8Resource.class
 model\User.class
