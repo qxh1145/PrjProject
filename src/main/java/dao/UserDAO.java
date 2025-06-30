@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import javax.naming.NamingException;
 import model.User;
 
 /**
@@ -52,17 +53,14 @@ public class UserDAO {
      * @param username the username to check
      * @return true if username exists, false otherwise
      */
-    public boolean checkUserExist(String username) {
+    public boolean checkUserExist(String username) throws NamingException {
         String sql = "SELECT * FROM Users WHERE username = ?";
         try (Connection conn = db.getConnection();
-             PreparedStatement st = conn.prepareStatement(sql)) {
-            
-            st.setString(1, username);
-            
-            try (ResultSet rs = st.executeQuery()) {
-                return rs.next();
-            }
-        } catch (Exception e) {
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
             System.err.println("Error checking user existence: " + e.getMessage());
             return false;
         }
@@ -114,5 +112,17 @@ public class UserDAO {
             System.err.println("Error getting user info: " + e.getMessage());
         }
         return null;
+    }
+
+    public boolean upgradeToPremium(String username) throws NamingException {
+        String sql = "UPDATE Users SET account_type = 'premium' WHERE username = ?";
+        try (Connection conn = db.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql)) {
+            ps.setString(1, username);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            System.err.println("Error upgrading user to premium: " + e.getMessage());
+            return false;
+        }
     }
 } 
