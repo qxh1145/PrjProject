@@ -161,7 +161,7 @@
                     <a class="nav-link" href="${pageContext.request.contextPath}/ai/chatbot">Chatbot</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="community.jsp" id="communityLink">Community</a>
+                    <a class="nav-link" href="recipes" id="communityLink">Community</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="toolsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">

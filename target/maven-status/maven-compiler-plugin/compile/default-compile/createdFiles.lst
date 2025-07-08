@@ -1,8 +1,14 @@
+controller\RecipeServlet.class
+controller\CommentServlet.class
 model\PostService.class
+model\Recipe.class
 controller\ConfirmPaymentServlet$1.class
 controller\ConfirmPaymentServlet.class
 dao\PostDAO.class
+testdb.class
+dao\CommentDAO.class
 dao\DBContext.class
+dao\RecipeDAO.class
 model\Post.class
 model\UserName.class
 controller\MainServlet.class
@@ -10,4 +16,6 @@ dao\UserDAO.class
 com\mycompany\projectfinal\JakartaRestConfiguration.class
 model\AIResponse.class
 com\mycompany\projectfinal\resources\JakartaEE8Resource.class
+model\Comment.class
 model\User.class
+model\CommentService.class

@@ -11,9 +11,13 @@ import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 import model.User;
+import model.CommentService;
+import model.Comment;
+import java.util.List;
 
 @WebServlet(name = "MainServlet", urlPatterns = {"/main"})
 public class MainServlet extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -50,6 +54,9 @@ public class MainServlet extends HttpServlet {
             case "recipeDetail":
                 handleRecipeDetail(request, response);
                 break;
+            case "comment":
+                handleCommentGet(request, response);
+                break;
             default:
                 response.sendRedirect("index.jsp");
         }
@@ -72,6 +79,9 @@ public class MainServlet extends HttpServlet {
                 break;
             case "post":
                 handlePostPost(request, response);
+                break;
+            case "comment":
+                handleCommentPost(request, response);
                 break;
             default:
                 doGet(request, response);
@@ -101,7 +111,7 @@ public class MainServlet extends HttpServlet {
         String navAction = request.getParameter("navAction");
         HttpSession session = request.getSession();
         String role = (String) session.getAttribute("role");
-        String username = (String) session.getAttribute("username");
+        
         if (navAction == null) {
             response.sendRedirect("index.jsp");
             return;
@@ -136,6 +146,7 @@ public class MainServlet extends HttpServlet {
                 response.sendRedirect("index.jsp");
         }
     }
+
     private void handleRecipeNavigation(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String category = request.getParameter("category");
@@ -148,6 +159,7 @@ public class MainServlet extends HttpServlet {
             request.getRequestDispatcher("view/recipe/coffee/htmcoldbrew.jsp").forward(request, response);
         }
     }
+
     private void handleDashboardRedirect(HttpServletResponse response, String role) throws IOException {
         if ("admin".equals(role)) {
             response.sendRedirect("admin/dashboard.jsp");
@@ -168,6 +180,7 @@ public class MainServlet extends HttpServlet {
         }
         response.sendRedirect("login.jsp");
     }
+
     private void handleLoginPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
@@ -219,8 +232,9 @@ public class MainServlet extends HttpServlet {
     // Logic từ RegisterHandle
     private void handleRegisterGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doPost(request, response);
+        response.sendRedirect("register.jsp");
     }
+
     private void handleRegisterPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
@@ -257,14 +271,17 @@ public class MainServlet extends HttpServlet {
         }
     }
 
-    // Logic từ PostServlet (hiện tại chưa có xử lý gì)
+    // Logic từ PostServlet
     private void handlePostGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Xử lý GET cho post nếu cần
+        // Implement post GET logic if needed
+        response.sendRedirect("posts.jsp");
     }
+
     private void handlePostPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // Xử lý POST cho post nếu cần
+        // Implement post POST logic if needed
+        response.sendRedirect("posts.jsp");
     }
 
     // Xử lý truy cập trang công thức động
@@ -307,6 +324,7 @@ public class MainServlet extends HttpServlet {
         String path = request.getParameter("path");
         HttpSession session = request.getSession(false);
         boolean loggedIn = (session != null && session.getAttribute("user") != null);
+        
         if (path != null && path.endsWith(".jsp")) {
             if (!loggedIn) {
                 response.sendRedirect("login.jsp");
@@ -314,6 +332,7 @@ public class MainServlet extends HttpServlet {
             }
             String username = (String) session.getAttribute("user");
             String accountType = (String) session.getAttribute("accountType");
+            
             if (!"admin".equalsIgnoreCase(username) && accountType != null && accountType.trim().equalsIgnoreCase("free")) {
                 request.setAttribute("showLockOverlay", true);
             }
@@ -327,8 +346,310 @@ public class MainServlet extends HttpServlet {
         }
     }
 
+    /**
+     * Handle GET requests for comments (display comments)
+     */
+    private void handleCommentGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String commentAction = request.getParameter("commentAction");
+        
+        if (commentAction == null) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
+        
+        switch (commentAction) {
+            case "getRecipeComments":
+                handleGetRecipeComments(request, response);
+                break;
+            case "getPostComments":
+                handleGetPostComments(request, response);
+                break;
+            default:
+                response.sendRedirect("index.jsp");
+        }
+    }
+
+    /**
+     * Handle POST requests for comments (add, edit, delete)
+     */
+    private void handleCommentPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        // Check if user is logged in
+        HttpSession session = request.getSession(false);
+        if (session == null || session.getAttribute("user") == null) {
+            response.sendRedirect("login.jsp");
+            return;
+        }
+        
+        String commentAction = request.getParameter("commentAction");
+        String username = (String) session.getAttribute("user");
+        
+        if (commentAction == null) {
+            response.sendRedirect("index.jsp");
+            return;
+        }
+        
+        switch (commentAction) {
+            case "addRecipeComment":
+                handleAddRecipeComment(request, response, username);
+                break;
+            case "addPostComment":
+                handleAddPostComment(request, response, username);
+                break;
+            case "addRecipeReply":
+                handleAddRecipeReply(request, response, username);
+                break;
+            case "addPostReply":
+                handleAddPostReply(request, response, username);
+                break;
+            default:
+                response.sendRedirect("index.jsp");
+        }
+    }
+
+    /**
+     * Get comments for a specific recipe
+     */
+    private void handleGetRecipeComments(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try {
+            String recipeIdStr = request.getParameter("recipeId");
+            if (recipeIdStr == null || recipeIdStr.trim().isEmpty()) {
+                response.setContentType("text/html;charset=UTF-8");
+                response.getWriter().println("<p>Recipe ID is required</p>");
+                return;
+            }
+            
+            int recipeId = Integer.parseInt(recipeIdStr);
+            CommentService commentService = new CommentService();
+            
+            List<Comment> comments = commentService.getRecipeComments(recipeId);
+            int commentCount = commentService.getRecipeCommentCount(recipeId);
+            
+            request.setAttribute("comments", comments);
+            request.setAttribute("commentCount", commentCount);
+            request.setAttribute("recipeId", recipeId);
+            
+            // Forward to JSP page that displays comments
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/view/comments/recipeComments.jsp");
+            dispatcher.forward(request, response);
+            
+        } catch (NumberFormatException e) {
+            response.setContentType("text/html;charset=UTF-8");
+            response.getWriter().println("<p>Invalid recipe ID format</p>");
+        } catch (Exception e) {
+            e.printStackTrace(); 
+            System.err.println("Error getting recipe comments: " + e.getMessage());
+            response.setContentType("text/html;charset=UTF-8");
+            response.getWriter().println("<p>Error loading comments</p>");
+        }
+    }
+
+    /**
+     * Get comments for a specific post
+     */
+    private void handleGetPostComments(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        try {
+            String postIdStr = request.getParameter("postId");
+            if (postIdStr == null || postIdStr.trim().isEmpty()) {
+                response.setContentType("text/html;charset=UTF-8");
+                response.getWriter().println("<p>Post ID is required</p>");
+                return;
+            }
+            
+            int postId = Integer.parseInt(postIdStr);
+            CommentService commentService = new CommentService();
+            
+            List<Comment> comments = commentService.getPostComments(postId);
+            int commentCount = commentService.getPostCommentCount(postId);
+            
+            request.setAttribute("comments", comments);
+            request.setAttribute("commentCount", commentCount);
+            request.setAttribute("postId", postId);
+            
+            // Forward to JSP page that displays comments
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/view/comments/postComments.jsp");
+            dispatcher.forward(request, response);
+            
+        } catch (NumberFormatException e) {
+            response.setContentType("text/html;charset=UTF-8");
+            response.getWriter().println("<p>Invalid post ID format</p>");
+        } catch (Exception e) {
+            System.err.println("Error getting post comments: " + e.getMessage());
+            response.setContentType("text/html;charset=UTF-8");
+            response.getWriter().println("<p>Error loading comments</p>");
+        }
+    }
+
+    /**
+     * Add a new comment to a recipe - FIXED VERSION
+     */
+    private void handleAddRecipeComment(HttpServletRequest request, HttpServletResponse response, String username)
+            throws ServletException, IOException {
+        
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
+        try {
+            String recipeIdStr = request.getParameter("recipeId");
+            String commentText = request.getParameter("commentText");
+            
+            if (recipeIdStr == null || commentText == null || 
+                recipeIdStr.trim().isEmpty() || commentText.trim().isEmpty()) {
+                out.println("{\"success\": false, \"message\": \"Recipe ID and comment text are required\"}");
+                return;
+            }
+            
+            int recipeId = Integer.parseInt(recipeIdStr);
+            CommentService commentService = new CommentService();
+            
+            boolean success = commentService.addRecipeComment(username, recipeId, commentText.trim());
+            
+            if (success) {
+                out.println("{\"success\": true, \"message\": \"Comment added successfully\"}");
+            } else {
+                out.println("{\"success\": false, \"message\": \"Failed to add comment\"}");
+            }
+            
+        } catch (NumberFormatException e) {
+            out.println("{\"success\": false, \"message\": \"Invalid recipe ID format\"}");
+        } catch (Exception e) {
+            System.err.println("Error adding recipe comment: " + e.getMessage());
+            out.println("{\"success\": false, \"message\": \"Error adding comment: " + e.getMessage() + "\"}");
+        } finally {
+            out.flush();
+        }
+    }
+
+    /**
+     * Add a new comment to a post - FIXED VERSION
+     */
+    private void handleAddPostComment(HttpServletRequest request, HttpServletResponse response, String username)
+            throws ServletException, IOException {
+        
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
+        try {
+            String postIdStr = request.getParameter("postId");
+            String commentText = request.getParameter("commentText");
+            
+            if (postIdStr == null || commentText == null || 
+                postIdStr.trim().isEmpty() || commentText.trim().isEmpty()) {
+                out.println("{\"success\": false, \"message\": \"Post ID and comment text are required\"}");
+                return;
+            }
+            
+            int postId = Integer.parseInt(postIdStr);
+            CommentService commentService = new CommentService();
+            
+            boolean success = commentService.addPostComment(username, postId, commentText.trim());
+            
+            if (success) {
+                out.println("{\"success\": true, \"message\": \"Comment added successfully\"}");
+            } else {
+                out.println("{\"success\": false, \"message\": \"Failed to add comment\"}");
+            }
+            
+        } catch (NumberFormatException e) {
+            out.println("{\"success\": false, \"message\": \"Invalid post ID format\"}");
+        } catch (Exception e) {
+            System.err.println("Error adding post comment: " + e.getMessage());
+            out.println("{\"success\": false, \"message\": \"Error adding comment: " + e.getMessage() + "\"}");
+        } finally {
+            out.flush();
+        }
+    }
+
+    /**
+     * Add a reply to a recipe comment - FIXED VERSION
+     */
+    private void handleAddRecipeReply(HttpServletRequest request, HttpServletResponse response, String username)
+            throws ServletException, IOException {
+        
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
+        try {
+            String recipeIdStr = request.getParameter("recipeId");
+            String parentCommentIdStr = request.getParameter("parentCommentId");
+            String commentText = request.getParameter("commentText");
+            
+            if (recipeIdStr == null || parentCommentIdStr == null || commentText == null || 
+                recipeIdStr.trim().isEmpty() || parentCommentIdStr.trim().isEmpty() || commentText.trim().isEmpty()) {
+                out.println("{\"success\": false, \"message\": \"Recipe ID, parent comment ID and comment text are required\"}");
+                return;
+            }
+            
+            int recipeId = Integer.parseInt(recipeIdStr);
+            int parentCommentId = Integer.parseInt(parentCommentIdStr);
+            CommentService commentService = new CommentService();
+            
+            boolean success = commentService.addRecipeCommentReply(username, recipeId, commentText.trim(), parentCommentId);
+            
+            if (success) {
+                out.println("{\"success\": true, \"message\": \"Reply added successfully\"}");
+            } else {
+                out.println("{\"success\": false, \"message\": \"Failed to add reply\"}");
+            }
+            
+        } catch (NumberFormatException e) {
+            out.println("{\"success\": false, \"message\": \"Invalid ID format\"}");
+        } catch (Exception e) {
+            System.err.println("Error adding recipe reply: " + e.getMessage());
+            out.println("{\"success\": false, \"message\": \"Error adding reply: " + e.getMessage() + "\"}");
+        } finally {
+            out.flush();
+        }
+    }
+
+    /**
+     * Add a reply to a post comment - FIXED VERSION
+     */
+    private void handleAddPostReply(HttpServletRequest request, HttpServletResponse response, String username)
+            throws ServletException, IOException {
+        
+        response.setContentType("application/json;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        
+        try {
+            String postIdStr = request.getParameter("postId");
+            String parentCommentIdStr = request.getParameter("parentCommentId");
+            String commentText = request.getParameter("commentText");
+            
+            if (postIdStr == null || parentCommentIdStr == null || commentText == null || 
+                postIdStr.trim().isEmpty() || parentCommentIdStr.trim().isEmpty() || commentText.trim().isEmpty()) {
+                out.println("{\"success\": false, \"message\": \"Post ID, parent comment ID and comment text are required\"}");
+                return;
+            }
+            
+            int postId = Integer.parseInt(postIdStr);
+            int parentCommentId = Integer.parseInt(parentCommentIdStr);
+            CommentService commentService = new CommentService();
+            
+            boolean success = commentService.addPostCommentReply(username, postId, commentText.trim(), parentCommentId);
+            
+            if (success) {
+                out.println("{\"success\": true, \"message\": \"Reply added successfully\"}");
+            } else {
+                out.println("{\"success\": false, \"message\": \"Failed to add reply\"}");
+            }
+            
+        } catch (NumberFormatException e) {
+            out.println("{\"success\": false, \"message\": \"Invalid ID format\"}");
+        } catch (Exception e) {
+            System.err.println("Error adding post reply: " + e.getMessage());
+            out.println("{\"success\": false, \"message\": \"Error adding reply: " + e.getMessage() + "\"}");
+        } finally {
+            out.flush();
+        }
+    }
+
     @Override
     public String getServletInfo() {
         return "Main unified servlet";
     }
-} 
+}
