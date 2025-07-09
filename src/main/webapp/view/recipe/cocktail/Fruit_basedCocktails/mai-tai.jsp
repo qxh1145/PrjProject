@@ -36,7 +36,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.allrecipes.com/thmb/KMfZaOrzMp7LYEvJYyJjk6UqL8E=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/73287-mai-tai-ddmfs-hero-3x4-1001-44ffd41d2ea94e15ba63bac042cffac2.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -274,27 +274,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1505575967456-c9a9a55ef9b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Rum Punch" />
+          <img src="https://cdn.beyondthebayoublog.com/wp-content/uploads/2024/04/This-image-shows-rum-punch-served-in-a-glass.png" class="recipe-image" alt="Rum Punch" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Rum Punch</h3>
+            <h3 class="recipe-name">Fruit Punch</h3>
             <p class="recipe-description">A fruity and easy-to-make rum cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/fruit-punch.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Strawberry Daiquiri" />
+          <img src="https://tse3.mm.bing.net/th/id/OIP.lKFRVAmDwZfSf-u3Ahh8zQHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3" class="recipe-image" alt="Strawberry Daiquiri" />
           <div class="recipe-content">
             <h3 class="recipe-name">Strawberry Daiquiri</h3>
             <p class="recipe-description">A refreshing, fruity twist on the classic rum cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails/strawberry-daiquiri.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1510626176961-4b2c5c7e9ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Pina Colada" />
+          <img src="https://tse2.mm.bing.net/th/id/OIP.wjiMApVtGjJhNnENWQuuxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="recipe-image" alt="Pina Colada" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Pina Colada</h3>
+            <h3 class="recipe-name">Blue Lagoon</h3>
             <p class="recipe-description">A tropical cocktail with pineapple and coconut flavors</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails\blue-lagoon.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

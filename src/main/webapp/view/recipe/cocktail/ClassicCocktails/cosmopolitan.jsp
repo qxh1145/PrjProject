@@ -35,7 +35,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.bartender.edu.vn/wp-content/uploads/2021/01/cocktail-cosmopolitan.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -269,27 +269,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0c4?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Lemon Drop Martini" />
+          <img src="https://assets.epicurious.com/photos/63443ba259142b909ba89726/1:1/w_960,c_limit/WhiskeySourCocktails_RECIPE_100622_40707.jpg" class="recipe-image" alt="Lemon Drop Martini" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Lemon Drop Martini</h3>
+            <h3 class="recipe-name">Whiskey Sour</h3>
             <p class="recipe-description">A sweet and sour vodka classic</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/whiskey-sour.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1614000202999-51ae2dfd0c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Appletini" />
+          <img src="https://dayphache.edu.vn/wp-content/uploads/2019/05/mojito-bac-ha.jpg" class="recipe-image" alt="Appletini" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Appletini</h3>
+            <h3 class="recipe-name">Mojito</h3>
             <p class="recipe-description">Fruity and fun with a green apple twist</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/mojito.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1598133905826-b2d02b9afeb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="French Martini" />
+          <img src="https://assets.epicurious.com/photos/65848442ce8ae033680cd8a2/1:1/w_960,c_limit/Vodka-Martini_RECIPE.jpg" class="recipe-image" alt="French Martini" />
           <div class="recipe-content">
-            <h3 class="recipe-name">French Martini</h3>
+            <h3 class="recipe-name">Martini</h3>
             <p class="recipe-description">Vodka, pineapple, and raspberry liqueur delight</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/martini.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

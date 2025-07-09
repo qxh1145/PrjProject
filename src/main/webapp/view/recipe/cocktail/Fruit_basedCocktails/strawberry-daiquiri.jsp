@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://www.allrecipes.com/thmb/mzqfZC3tKFI-ZCWdYjfS_yvIbeA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/107945-virgin-strawberry-daiquiri-ddmfs-hero-4x3-e12433432d6543a6846f754b0f298f09.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -266,27 +266,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Classic Daiquiri" />
+          <img src="https://recettemoderne.com/wp-content/webp-express/webp-images/uploads/2024/09/8-29-768x768.png.webp" class="recipe-image" alt="Classic Daiquiri" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Classic Daiquiri</h3>
-            <p class="recipe-description">A simple, refreshing rum cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Fruit Punch</h3>
+            <p class="recipe-description">A colorful blend of fruit juices and soda</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/fruit-punch.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1504805572947-34fad45aed93?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Frozen Daiquiri" />
+          <img src="https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-10/nojito-recipe.png" class="recipe-image" alt="Frozen Daiquiri" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Frozen Daiquiri</h3>
-            <p class="recipe-description">Blended with ice for a frosty treat</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Nojito</h3>
+            <p class="recipe-description">A non-alcoholic mojito with mint and lime</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/nojito.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1510626176961-4b2c5c7e9ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Mango Daiquiri" />
+          <img src="https://www.thespruceeats.com/thmb/xr_lMkEVMaJas6o_CoQzhUHXDqU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dirty-shirley-5272444-hero-01-798475cd23b746c4bb9ff3cd1def4dd7.jpg" class="recipe-image" alt="Mango Daiquiri" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Mango Daiquiri</h3>
-            <p class="recipe-description">A tropical mango twist on the classic</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Shirley Temple</h3>
+            <p class="recipe-description">A sweet fizzy drink with grenadine and soda</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/shirley-temple.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

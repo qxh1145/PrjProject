@@ -36,7 +36,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://recettemoderne.com/wp-content/webp-express/webp-images/uploads/2024/09/8-29-768x768.png.webp');
             background-size: cover;
             background-position: center;
             color: white;
@@ -273,27 +273,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Fruit Punch" />
+          <img src="https://recettemoderne.com/wp-content/webp-express/webp-images/uploads/2024/09/8-29-768x768.png.webp" class="recipe-image" alt="Fruit Punch" />
           <div class="recipe-content">
             <h3 class="recipe-name">Fruit Punch</h3>
             <p class="recipe-description">A fun and fruity beverage for any occasion</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/fruit-punch.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Sunset Cooler" />
+          <img src="https://i.shgcdn.com/313aa784-2ed4-4d05-ab8b-551ffb79ec36/-/format/auto/-/preview/3000x3000/-/quality/lighter/" class="recipe-image" alt="Sunset Cooler" />
           <div class="recipe-content">
             <h3 class="recipe-name">Sunset Cooler</h3>
             <p class="recipe-description">A colorful and refreshing tropical drink</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/sunset-cooler.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1524594157363-9f8f1ecb6ee2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Blue Lagoon" />
+          <img src="https://www.kitchengeekery.com//wp-content/webpc-passthru.php?src=https://www.kitchengeekery.com/wp-content/uploads/2021/01/blue-lagoon-cocktail-300x240.jpg&nocache=1" class="recipe-image" alt="Blue Lagoon" />
           <div class="recipe-content">
             <h3 class="recipe-name">Blue Lagoon</h3>
             <p class="recipe-description">A refreshing blue vodka cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails/blue-lagoon.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

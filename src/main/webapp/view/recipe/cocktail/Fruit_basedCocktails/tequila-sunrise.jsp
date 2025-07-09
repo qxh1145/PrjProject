@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://static01.nyt.com/images/2023/08/17/multimedia/ND-Tequila-Sunrise/LH-Sangria-tjvl-threeByTwoMediumAt2X.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -264,27 +264,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1524594157363-9f8f1ecb6ee2?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Margarita" />
+          <img src="https://chaloglass.vn/wp-content/uploads/20240426margarita-la-gi-ly-thuy-tinh-nao-dung-cocktail-margarita-dep-va-phu-hop-1-scaled.jpg" class="recipe-image" alt="Margarita" />
           <div class="recipe-content">
             <h3 class="recipe-name">Margarita</h3>
             <p class="recipe-description">A classic tequila cocktail with lime and salt</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/margarita.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1510626176961-4b2c5c7e9ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Mai Tai" />
+          <img src="https://www.allrecipes.com/thmb/KMfZaOrzMp7LYEvJYyJjk6UqL8E=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/73287-mai-tai-ddmfs-hero-3x4-1001-44ffd41d2ea94e15ba63bac042cffac2.jpg" class="recipe-image" alt="Mai Tai" />
           <div class="recipe-content">
             <h3 class="recipe-name">Mai Tai</h3>
             <p class="recipe-description">A tropical rum-based cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails/mai-tai.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1510626176961-4b2c5c7e9ccf?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Blue Lagoon" />
+          <img src="https://res.cloudinary.com/htt8g4cd/images/w_848,h_565,c_scale/f_auto,q_auto/v1730839987/wp/03_23_Blue_Lagoon_Cocktail_HERO_AntonisAchilleos_1920x1280/03_23_Blue_Lagoon_Cocktail_HERO_AntonisAchilleos_1920x1280.jpg?_i=AA" class="recipe-image" alt="Blue Lagoon" />
           <div class="recipe-content">
             <h3 class="recipe-name">Blue Lagoon</h3>
             <p class="recipe-description">A refreshing blue vodka cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails/blue-lagoon.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

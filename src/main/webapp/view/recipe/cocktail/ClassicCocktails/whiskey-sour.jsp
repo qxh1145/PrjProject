@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://assets.epicurious.com/photos/63443ba259142b909ba89726/1:1/w_960,c_limit/WhiskeySourCocktails_RECIPE_100622_40707.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -267,27 +267,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1582555242306-49a3b59e0ff5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Manhattan" />
+          <img src="https://drinkoteket.se/wp-content/uploads/manhattan-1.jpg" class="recipe-image" alt="Manhattan" />
           <div class="recipe-content">
             <h3 class="recipe-name">Manhattan</h3>
             <p class="recipe-description">A smooth, stirred mix of whiskey and vermouth</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/manhattan.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1568051243853-65865dbd2743?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Mint Julep" />
+          <img src="https://assets.epicurious.com/photos/65848442ce8ae033680cd8a2/1:1/w_960,c_limit/Vodka-Martini_RECIPE.jpg" class="recipe-image" alt="Mint Julep" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Mint Julep</h3>
-            <p class="recipe-description">A refreshing Southern bourbon cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Martini</h3>
+            <p class="recipe-description">A refined blend of gin and dry vermouth, garnished with an olive</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/martini.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1608181564923-d7453d248ab3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Amaretto Sour" />
+          <img src="https://dayphache.edu.vn/wp-content/uploads/2019/05/mojito-bac-ha.jpg" class="recipe-image" alt="Amaretto Sour" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Amaretto Sour</h3>
-            <p class="recipe-description">A sweeter, nutty variation of the sour family</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Mojito</h3>
+            <p class="recipe-description">A refreshing Cuban cocktail with mint, lime, and rum</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/mojito.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

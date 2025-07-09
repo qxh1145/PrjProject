@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://dayphache.edu.vn/wp-content/uploads/2015/11/cocktail-margaritaa.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -266,27 +266,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1627308594977-1dc5c44d8435?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Paloma" />
+          <img src="https://assets.epicurious.com/photos/63443ba259142b909ba89726/1:1/w_960,c_limit/WhiskeySourCocktails_RECIPE_100622_40707.jpg" class="recipe-image" alt="Paloma" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Paloma</h3>
-            <p class="recipe-description">Tequila and grapefruit soda combo</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Whiskey Sour</h3>
+            <p class="recipe-description">A tangy mix of whiskey, lemon juice, and a touch of sweetness</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/whiskey-sour.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1605276375341-8300e158f005?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Frozen Margarita" />
+          <img src="https://dayphache.edu.vn/wp-content/uploads/2019/05/mojito-bac-ha.jpg" class="recipe-image" alt="Frozen Margarita" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Frozen Margarita</h3>
-            <p class="recipe-description">Icy twist on the classic</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Mojito</h3>
+            <p class="recipe-description">A refreshing Cuban cocktail with mint, lime, and rum</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/mojito.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1625944232979-3ab5fdf5c005?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Tequila Sunrise" />
+          <img src="https://amcollege.edu.vn/wp-content/uploads/2023/05/so-luoc-manhattan-cocktail.jpg" class="recipe-image" alt="Tequila Sunrise" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Tequila Sunrise</h3>
-            <p class="recipe-description">Colorful and fruity tequila cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Manhattan</h3>
+            <p class="recipe-description">A strong and smooth whiskey cocktail with sweet vermouth</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/manhattan.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>
