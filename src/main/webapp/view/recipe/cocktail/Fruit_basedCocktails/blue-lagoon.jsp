@@ -36,7 +36,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://tse2.mm.bing.net/th/id/OIP.wjiMApVtGjJhNnENWQuuxQHaHa?rs=1&pid=ImgDetMain&o=7&rm=3');
             background-size: cover;
             background-position: center;
             color: white;
@@ -270,27 +270,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1601379322985-f0c9dcf70902?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Blue Hawaii" />
+          <img src="https://www.bartender.edu.vn/wp-content/uploads/2021/01/cocktail-cosmopolitan.jpg" class="recipe-image" alt="Blue Hawaii" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Blue Hawaii</h3>
-            <p class="recipe-description">Tropical cousin with pineapple and rum</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Cosmopolitan</h3>
+            <p class="recipe-description">A chic vodka-based cocktail with cranberry and lime</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/cosmopolitan.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1555949258-eb67b1ef0d0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Electric Lemonade" />
+          <img src="https://amcollege.edu.vn/wp-content/uploads/2023/05/so-luoc-manhattan-cocktail.jpg" class="recipe-image" alt="Electric Lemonade" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Electric Lemonade</h3>
-            <p class="recipe-description">Zesty and colorful vodka drink</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Manhattan</h3>
+            <p class="recipe-description">A strong and smooth whiskey cocktail with sweet vermouth</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/manhattan.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1567358975424-7e3d320264d5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Ocean Breeze" />
+          <img src="https://dayphache.edu.vn/wp-content/uploads/2015/11/cocktail-margaritaa.jpg" class="recipe-image" alt="Ocean Breeze" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Ocean Breeze</h3>
-            <p class="recipe-description">Cool and refreshing blue cocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Margarita</h3>
+            <p class="recipe-description">A tangy mix of tequila, lime juice, and triple sec</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/margarita.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

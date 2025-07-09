@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://assets.epicurious.com/photos/65848442ce8ae033680cd8a2/1:1/w_960,c_limit/Vodka-Martini_RECIPE.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -263,27 +263,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Vesper" />
+          <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/1D4CCB7D-D830-4ED3-9535-875D10CFC801/Derivates/DAD3AE52-E326-4309-90BA-10F6BEEB1EC7.jpg" class="recipe-image" alt="Vesper" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Vesper</h3>
-            <p class="recipe-description">James Bond's Martini variation</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Negroni</h3>
+            <p class="recipe-description">A bitter and bold mix of gin, Campari, and sweet vermouth</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/negroni.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1616012987609-1e6f82ca5486?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Dirty Martini" />
+          <img src="https://assets.epicurious.com/photos/63443ba259142b909ba89726/1:1/w_960,c_limit/WhiskeySourCocktails_RECIPE_100622_40707.jpg" class="recipe-image" alt="Dirty Martini" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Dirty Martini</h3>
-            <p class="recipe-description">Martini with olive brine twist</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Whiskey Sour</h3>
+            <p class="recipe-description">A tangy mix of whiskey, lemon juice, and a touch of sweetness</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/whiskey-sour.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1590080877400-e7d3cf86c441?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Gibson" />
+          <img src="https://assets.epicurious.com/photos/65848442ce8ae033680cd8a2/1:1/w_960,c_limit/Vodka-Martini_RECIPE.jpg" class="recipe-image" alt="Gibson" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Gibson</h3>
-            <p class="recipe-description">Martini with a pickled onion</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Martini</h3>
+            <p class="recipe-description">A crisp gin martini served with a pickled onion twist</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/martini.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

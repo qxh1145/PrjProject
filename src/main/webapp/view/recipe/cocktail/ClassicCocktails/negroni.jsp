@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://dayphache.edu.vn/wp-content/uploads/2015/12/cocktail-negroni-1.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -268,27 +268,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1606166325680-ef49c3d3f87e?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Margarita" />
+          <img src="https://bing.com/th?id=OSK.f52255afc618d2a131c4c5c584b55263" class="recipe-image" alt="Margarita" />
           <div class="recipe-content">
             <h3 class="recipe-name">Margarita</h3>
             <p class="recipe-description">A tangy and refreshing tequila-based classic</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/margarita.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1564758578494-fc3ed0971d9c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Old Fashioned" />
+          <img src="https://dayphache.edu.vn/wp-content/uploads/2019/05/mojito-bac-ha.jpg" class="recipe-image" alt="Old Fashioned" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Old Fashioned</h3>
-            <p class="recipe-description">A spirit-forward bourbon cocktail with bitters</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Mojito</h3>
+            <p class="recipe-description">A refreshing Cuban cocktail with mint, lime, and rum</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/mojito.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1615486568359-063f6cf2f798?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Aperol Spritz" />
+          <img src="'https://assets.epicurious.com/photos/63443ba259142b909ba89726/1:1/w_960,c_limit/WhiskeySourCocktails_RECIPE_100622_40707.jpg" class="recipe-image" alt="Aperol Spritz" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Aperol Spritz</h3>
-            <p class="recipe-description">A light, sparkling cocktail with orange and Prosecco</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Whiskey Sour</h3>
+            <p class="recipe-description">A tangy mix of whiskey, lemon juice, and a touch of sweetness</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/whiskey-sour.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://staticcookist.akamaized.net/wp-content/uploads/sites/22/2021/07/virgin-mojito.jpeg?im=AspectCrop=(16,9);Resize,width=718;');
             background-size: cover;
             background-position: center;
             color: white;
@@ -266,27 +266,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Fruit Punch" />
+          <img src="https://recettemoderne.com/wp-content/webp-express/webp-images/uploads/2024/09/8-29-768x768.png.webp" class="recipe-image" alt="Fruit Punch" />
           <div class="recipe-content">
             <h3 class="recipe-name">Fruit Punch</h3>
             <p class="recipe-description">Fruity and fun for everyone</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/fruit-punch.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1622662047984-7ef7bf8c3dc4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Nojito" />
+          <img src="https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-10/nojito-recipe.png" class="recipe-image" alt="Nojito" />
           <div class="recipe-content">
             <h3 class="recipe-name">Nojito</h3>
-            <p class="recipe-description">Minty and fresh without alcohol</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <p class="recipe-description">A crisp blend of lime, mint, and soda over white rum</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/nojito.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1603048293352-0c1e2291f2b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Shirley Temple" />
+          <img src="https://www.thespruceeats.com/thmb/xr_lMkEVMaJas6o_CoQzhUHXDqU=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/dirty-shirley-5272444-hero-01-798475cd23b746c4bb9ff3cd1def4dd7.jpg" class="recipe-image" alt="Shirley Temple" />
           <div class="recipe-content">
             <h3 class="recipe-name">Shirley Temple</h3>
             <p class="recipe-description">Sweet and bubbly for any occasion</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/shirley-temple.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

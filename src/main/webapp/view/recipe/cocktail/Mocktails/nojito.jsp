@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-10/nojito-recipe.png');
             background-size: cover;
             background-position: center;
             color: white;
@@ -266,27 +266,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1622662047984-7ef7bf8c3dc4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Nojito" />
+          <img src="https://recipes.net/wp-content/uploads/portal_files/recipes_net_posts/2021-10/nojito-recipe.png" class="recipe-image" alt="Nojito" />
           <div class="recipe-content">
             <h3 class="recipe-name">Nojito</h3>
             <p class="recipe-description">Fresh and fizzy mint-lime drink for any time</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/nojito.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1570158268183-d296b2892211?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Fruit Punch" />
+          <img src="https://recettemoderne.com/wp-content/webp-express/webp-images/uploads/2024/09/8-29-768x768.png.webp" class="recipe-image" alt="Fruit Punch" />
           <div class="recipe-content">
             <h3 class="recipe-name">Fruit Punch</h3>
             <p class="recipe-description">A fun and fruity beverage for all ages</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/fruit-punch.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1616690061719-2e5846cbd891?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Sunset Cooler" />
+          <img src="https://i.shgcdn.com/313aa784-2ed4-4d05-ab8b-551ffb79ec36/-/format/auto/-/preview/3000x3000/-/quality/lighter/" class="recipe-image" alt="Sunset Cooler" />
           <div class="recipe-content">
             <h3 class="recipe-name">Sunset Cooler</h3>
             <p class="recipe-description">A vibrant and relaxing mocktail</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/sunset-cooler.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>

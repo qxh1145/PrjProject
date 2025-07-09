@@ -36,7 +36,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://dayphache.edu.vn/wp-content/uploads/2019/05/mojito-bac-ha.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -266,29 +266,29 @@
             <h2 class="related-recipes-title">You May Also Like</h2>
             <div class="recipe-grid">
                 <div class="recipe-card">
-                    <img src="https://images.unsplash.com/photo-1551022377-89a53f95ebd6?auto=format&fit=crop&w=500&q=80" alt="Daiquiri" class="recipe-image">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.kAaokxRiN6Cy2Ttq4NQbSwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Daiquiri" class="recipe-image">
                     <div class="recipe-content">
                         <h3 class="recipe-name">Strawberry Daiquiri</h3>
                         <p class="recipe-description">A fruity and refreshing rum cocktail</p>
-                        <a href="#" class="recipe-link">View Recipe -></a>
+                        <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails/strawberry-daiquiri.jsp" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
 
                 <div class="recipe-card">
-                    <img src="https://images.unsplash.com/photo-1565895405130-03a0f1593444?auto=format&fit=crop&w=500&q=80" alt="Margarita" class="recipe-image">
+                    <img src="https://th.bing.com/th/id/R.c1b72c15f5ec01380cc91f87e0e8c351?rik=CbkpIncXrAnrSg&riu=http%3a%2f%2fi-exc.ccm2.net%2fiex%2f800%2f1383741544%2f1202775.jpg&ehk=lrXOJ0YuxMYrur%2b0PLyLPJrS83mBSOq2pTOI%2bJUtBxo%3d&risl=&pid=ImgRaw&r=0" alt="Margarita" class="recipe-image">
                     <div class="recipe-content">
                         <h3 class="recipe-name">Margarita</h3>
                         <p class="recipe-description">Classic tequila, lime, and salt cocktail</p>
-                        <a href="#" class="recipe-link">View Recipe -></a>
+                        <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/margarita.jsp" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
 
                 <div class="recipe-card">
-                    <img src="https://images.unsplash.com/photo-1582197290600-b32080baf94b?auto=format&fit=crop&w=500&q=80" alt="Nojito" class="recipe-image">
+                    <img src="https://th.bing.com/th/id/R.4d5cc954272a13414c11e9d8b808527d?rik=NLjemo1wziPJ%2fQ&pid=ImgRaw&r=0" alt="Nojito" class="recipe-image">
                     <div class="recipe-content">
                         <h3 class="recipe-name">Nojito</h3>
                         <p class="recipe-description">A non-alcoholic version of the mojito</p>
-                        <a href="#" class="recipe-link">View Recipe -></a>
+                        <a href="main?action=recipeDetail&path=view/recipe/cocktail/Mocktails/nojito.jsp" class="recipe-link">View Recipe -></a>
                     </div>
                 </div>
             </div>

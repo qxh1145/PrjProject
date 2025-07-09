@@ -30,7 +30,7 @@
         .recipe-header {
             text-align: center;
             padding: 3rem 0;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1617196032255-7338c12b3484?auto=format&fit=crop&w=1350&q=80');
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://th.bing.com/th/id/R.93a9a34aacaaa384424974c3229e74f5?rik=MotW1xoDWJZx4g&riu=http%3a%2f%2fsharkninja-cookingcircle.s3.eu-west-1.amazonaws.com%2fwp-content%2fuploads%2f2022%2f10%2f18154121%2fMango-Margarita-2220x1000.jpg&ehk=w1UPJTwi7rT0qjU2FXNJFTZaXugFOBzAgxnS21bQs8k%3d&risl=&pid=ImgRaw&r=0');
             background-size: cover;
             background-position: center;
             color: white;
@@ -207,7 +207,7 @@
 
 
   <!-- Recipe Header -->
-  <div class="recipe-header" style="--header-image: url('https://images.unsplash.com/photo-1590080874692-845c65b7aefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80')">
+  <div class="recipe-header" style="--header-image: url('https://th.bing.com/th/id/R.93a9a34aacaaa384424974c3229e74f5?rik=MotW1xoDWJZx4g&riu=http%3a%2f%2fsharkninja-cookingcircle.s3.eu-west-1.amazonaws.com%2fwp-content%2fuploads%2f2022%2f10%2f18154121%2fMango-Margarita-2220x1000.jpg&ehk=w1UPJTwi7rT0qjU2FXNJFTZaXugFOBzAgxnS21bQs8k%3d&risl=&pid=ImgRaw&r=0')">
     <h1>How to Make a Mango Margarita</h1>
     <p>A tropical twist on the classic margarita with fresh mango</p>
   </div>
@@ -268,27 +268,27 @@
       <h2 class="related-recipes-title">You May Also Like</h2>
       <div class="recipe-grid">
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1571355978242-4f5298f4377e?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Classic Margarita" />
+          <img src="https://dayphache.edu.vn/wp-content/uploads/2015/11/cocktail-margaritaa.jpg" class="recipe-image" alt="Classic Margarita" />
           <div class="recipe-content">
             <h3 class="recipe-name">Classic Margarita</h3>
             <p class="recipe-description">The timeless tequila cocktail with lime</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/ClassicCocktails/margarita.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1560179707-5ef862a77d7c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Pineapple Margarita" />
+          <img src="https://www.allrecipes.com/thmb/mzqfZC3tKFI-ZCWdYjfS_yvIbeA=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/107945-virgin-strawberry-daiquiri-ddmfs-hero-4x3-e12433432d6543a6846f754b0f298f09.jpg" class="recipe-image" alt="Pineapple Margarita" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Pineapple Margarita</h3>
-            <p class="recipe-description">Sweet and tangy with fresh pineapple juice</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <h3 class="recipe-name">Strawberry Margarita</h3>
+            <p class="recipe-description">Sweet and tangy with fresh strawberry juice</p>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails/strawberry-daiquiri.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
         <div class="recipe-card">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="recipe-image" alt="Spicy Margarita" />
+          <img src="https://static01.nyt.com/images/2023/08/17/multimedia/ND-Tequila-Sunrise/LH-Sangria-tjvl-threeByTwoMediumAt2X.jpg" class="recipe-image" alt="Spicy Margarita" />
           <div class="recipe-content">
-            <h3 class="recipe-name">Spicy Margarita</h3>
+            <h3 class="recipe-name">Tequila Sunrise</h3>
             <p class="recipe-description">Add a kick with jalapeño and chili powder rim</p>
-            <a href="#" class="recipe-link">View Recipe →</a>
+            <a href="main?action=recipeDetail&path=view/recipe/cocktail/Fruit_basedCocktails/tequila-sunrise.jsp" class="recipe-link">View Recipe →</a>
           </div>
         </div>
       </div>
